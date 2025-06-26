@@ -1,0 +1,4 @@
+nome,idade,sexo,sintomas,pressao_arterial,frequencia_cardiaca,temperatura,saturacao_oxigenio,historico_medico
+Joao da Silva,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Maria Oliveira,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,"Enxaqueca cronica"
+Carlos Souza,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
