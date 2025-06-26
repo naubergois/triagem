@@ -1,0 +1,13 @@
+flask==3.0.0
+langchain==0.3.26
+langchain-openai==0.3.25
+langchain-community==0.3.26
+langchain-core==0.3.66
+scikit-learn==1.7.0
+pandas==2.2.3
+numpy==1.26.4
+matplotlib==3.9.3
+seaborn==0.13.2
+python-dotenv==1.1.1
+requests==2.32.3
+

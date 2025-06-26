@@ -1,0 +1,85 @@
+[
+  {
+    "patient_id": "PAC_000001",
+    "risk_category": "AZUL",
+    "priority": 5,
+    "max_wait_minutes": 240,
+    "confidence_score": 0.5,
+    "reasoning": "Sintomas não urgentes ou consulta de rotina",
+    "recommendations": [
+      "Atendimento em até 4 horas",
+      "Consulta de rotina",
+      "Orientações preventivas",
+      "Agendamento de retorno se necessário"
+    ],
+    "alerts": [
+      "ATENÇÃO: Paciente idoso - maior risco de complicações",
+      "ATENÇÃO: Comorbidade de alto risco - diabetes"
+    ],
+    "timestamp": "2025-06-26T12:32:29.765940"
+  },
+  {
+    "patient_id": "PAC_000002",
+    "risk_category": "AZUL",
+    "priority": 5,
+    "max_wait_minutes": 240,
+    "confidence_score": 0.5,
+    "reasoning": "Sintomas não urgentes ou consulta de rotina",
+    "recommendations": [
+      "Atendimento em até 4 horas",
+      "Consulta de rotina",
+      "Orientações preventivas",
+      "Agendamento de retorno se necessário"
+    ],
+    "alerts": [],
+    "timestamp": "2025-06-26T12:32:29.767663"
+  },
+  {
+    "patient_id": "PAC_000003",
+    "risk_category": "AZUL",
+    "priority": 5,
+    "max_wait_minutes": 240,
+    "confidence_score": 0.5,
+    "reasoning": "Sintomas não urgentes ou consulta de rotina",
+    "recommendations": [
+      "Atendimento em até 4 horas",
+      "Consulta de rotina",
+      "Orientações preventivas",
+      "Agendamento de retorno se necessário"
+    ],
+    "alerts": [],
+    "timestamp": "2025-06-26T12:32:29.769038"
+  },
+  {
+    "patient_id": "PAC_000004",
+    "risk_category": "AZUL",
+    "priority": 5,
+    "max_wait_minutes": 240,
+    "confidence_score": 0.5,
+    "reasoning": "Sintomas não urgentes ou consulta de rotina",
+    "recommendations": [
+      "Atendimento em até 4 horas",
+      "Consulta de rotina",
+      "Orientações preventivas",
+      "Agendamento de retorno se necessário"
+    ],
+    "alerts": [],
+    "timestamp": "2025-06-26T12:32:29.770416"
+  },
+  {
+    "patient_id": "PAC_000005",
+    "risk_category": "AZUL",
+    "priority": 5,
+    "max_wait_minutes": 240,
+    "confidence_score": 0.5,
+    "reasoning": "Sintomas não urgentes ou consulta de rotina",
+    "recommendations": [
+      "Atendimento em até 4 horas",
+      "Consulta de rotina",
+      "Orientações preventivas",
+      "Agendamento de retorno se necessário"
+    ],
+    "alerts": [],
+    "timestamp": "2025-06-26T12:32:29.771732"
+  }
+]

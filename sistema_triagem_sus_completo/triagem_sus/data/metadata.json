@@ -1,0 +1,38 @@
+{
+  "total_patients": 10000,
+  "generation_date": "2025-06-26T12:30:18.288549",
+  "manchester_categories": {
+    "VERMELHO": {
+      "priority": 1,
+      "max_wait_minutes": 0,
+      "description": "Emerg\u00eancia"
+    },
+    "LARANJA": {
+      "priority": 2,
+      "max_wait_minutes": 10,
+      "description": "Muito urgente"
+    },
+    "AMARELO": {
+      "priority": 3,
+      "max_wait_minutes": 60,
+      "description": "Urgente"
+    },
+    "VERDE": {
+      "priority": 4,
+      "max_wait_minutes": 120,
+      "description": "Pouco urgente"
+    },
+    "AZUL": {
+      "priority": 5,
+      "max_wait_minutes": 240,
+      "description": "N\u00e3o urgente"
+    }
+  },
+  "risk_distribution": {
+    "VERDE": 3498,
+    "AMARELO": 3016,
+    "AZUL": 1511,
+    "LARANJA": 1455,
+    "VERMELHO": 520
+  }
+}

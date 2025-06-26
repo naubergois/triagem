@@ -1,0 +1,11 @@
+{
+  "model_accuracies": {
+    "random_forest": 0.931,
+    "logistic_regression": 0.931,
+    "neural_network": 0.924
+  },
+  "best_model": "random_forest",
+  "best_accuracy": 0.931,
+  "evaluation_date": "2025-06-26T12:39:31.525501",
+  "test_samples": 2000
+}

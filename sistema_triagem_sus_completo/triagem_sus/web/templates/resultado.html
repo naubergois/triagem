@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+
+{% block title %}Resultado da Triagem - Sistema de Triagem SUS{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-10 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h4><i class="fas fa-clipboard-check"></i> Resultado da Triagem</h4>
+            </div>
+            <div class="card-body">
+                <!-- Resultado Principal -->
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header risk-{{ result.risk_category.lower() }}">
+                                <h5 class="mb-0">
+                                    <i class="fas fa-exclamation-triangle"></i> 
+                                    Classificação de Risco: {{ result.risk_category }}
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Prioridade:</strong> {{ result.priority }}</p>
+                                <p><strong>Tempo máximo de espera:</strong> {{ result.max_wait_minutes }} minutos</p>
+                                <p><strong>Confiança:</strong> {{ "%.1f"|format(result.confidence_score * 100) }}%</p>
+                                <p><strong>Timestamp:</strong> {{ result.timestamp }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-info text-white">
+                                <h5 class="mb-0"><i class="fas fa-user"></i> Dados do Paciente</h5>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>ID:</strong> {{ patient_data.patient_id }}</p>
+                                <p><strong>Idade:</strong> {{ patient_data.age_range }} anos</p>
+                                <p><strong>Sexo:</strong> {{ patient_data.gender }}</p>
+                                <p><strong>Queixa:</strong> {{ patient_data.chief_complaint }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Justificativa -->
+                <div class="card mb-4">
+                    <div class="card-header bg-secondary text-white">
+                        <h5 class="mb-0"><i class="fas fa-info-circle"></i> Justificativa</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>{{ result.reasoning }}</p>
+                    </div>
+                </div>
+
+                <!-- Recomendações -->
+                <div class="card mb-4">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0"><i class="fas fa-list-check"></i> Recomendações</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            {% for recommendation in result.recommendations %}
+                            <li class="list-group-item">
+                                <i class="fas fa-check-circle text-success"></i> {{ recommendation }}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sintomas e Sinais Vitais -->
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-warning text-dark">
+                                <h5 class="mb-0"><i class="fas fa-thermometer"></i> Sintomas</h5>
+                            </div>
+                            <div class="card-body">
+                                {% if patient_data.symptoms %}
+                                <ul class="list-unstyled">
+                                    {% for symptom in patient_data.symptoms %}
+                                    <li><i class="fas fa-dot-circle text-warning"></i> {{ symptom }}</li>
+                                    {% endfor %}
+                                </ul>
+                                {% else %}
+                                <p class="text-muted">Nenhum sintoma específico relatado</p>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0"><i class="fas fa-heartbeat"></i> Sinais Vitais</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <small class="text-muted">Temperatura</small><br>
+                                        <strong>{{ patient_data.vital_signs.temperature }}°C</strong>
+                                    </div>
+                                    <div class="col-6">
+                                        <small class="text-muted">Freq. Cardíaca</small><br>
+                                        <strong>{{ patient_data.vital_signs.heart_rate }} bpm</strong>
+                                    </div>
+                                    <div class="col-6">
+                                        <small class="text-muted">Pressão Arterial</small><br>
+                                        <strong>{{ patient_data.vital_signs.blood_pressure_systolic }}/{{ patient_data.vital_signs.blood_pressure_diastolic }} mmHg</strong>
+                                    </div>
+                                    <div class="col-6">
+                                        <small class="text-muted">Freq. Respiratória</small><br>
+                                        <strong>{{ patient_data.vital_signs.respiratory_rate }} irpm</strong>
+                                    </div>
+                                    <div class="col-12 mt-2">
+                                        <small class="text-muted">Saturação O2</small><br>
+                                        <strong>{{ patient_data.vital_signs.oxygen_saturation }}%</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comorbidades -->
+                {% if patient_data.comorbidities and 'nenhuma' not in patient_data.comorbidities %}
+                <div class="card mb-4">
+                    <div class="card-header bg-danger text-white">
+                        <h5 class="mb-0"><i class="fas fa-exclamation-circle"></i> Comorbidades</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            {% for comorbidity in patient_data.comorbidities %}
+                            <li><i class="fas fa-dot-circle text-danger"></i> {{ comorbidity }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                {% endif %}
+
+                <!-- Ações -->
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <a href="{{ url_for('triagem_form') }}" class="btn btn-secondary">
+                        <i class="fas fa-plus"></i> Nova Triagem
+                    </a>
+                    <a href="{{ url_for('dashboard') }}" class="btn btn-info">
+                        <i class="fas fa-chart-bar"></i> Ver Dashboard
+                    </a>
+                    <button onclick="window.print()" class="btn btn-primary">
+                        <i class="fas fa-print"></i> Imprimir
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

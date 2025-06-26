@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block title %}Início - Sistema de Triagem SUS{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="jumbotron bg-primary text-white p-5 rounded mb-4">
+            <h1 class="display-4">Sistema de Triagem Inteligente SUS</h1>
+            <p class="lead">Utilizando agentes inteligentes e machine learning para otimizar a triagem de pacientes no sistema público de saúde.</p>
+            <hr class="my-4">
+            <p>Baseado no Protocolo de Manchester com classificação automática de risco.</p>
+            <a class="btn btn-light btn-lg" href="{{ url_for('triagem_form') }}" role="button">
+                <i class="fas fa-user-md"></i> Iniciar Nova Triagem
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header bg-success text-white">
+                <i class="fas fa-robot"></i> Agentes Inteligentes
+            </div>
+            <div class="card-body">
+                <p>Sistema baseado em LangChain que analisa sintomas, sinais vitais e histórico médico para classificação automática de risco.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header bg-info text-white">
+                <i class="fas fa-brain"></i> Machine Learning
+            </div>
+            <div class="card-body">
+                <p>Modelos treinados (Random Forest, Regressão Logística, Redes Neurais) com acurácia superior a 93% na classificação.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header bg-warning text-dark">
+                <i class="fas fa-tachometer-alt"></i> Protocolo Manchester
+            </div>
+            <div class="card-body">
+                <p>Implementação do protocolo internacional de triagem com 5 categorias de risco e tempos máximos de espera.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5><i class="fas fa-info-circle"></i> Categorias de Risco</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="badge risk-vermelho p-2 w-100">
+                            <strong>VERMELHO</strong><br>
+                            Emergência<br>
+                            0 min
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="badge risk-laranja p-2 w-100">
+                            <strong>LARANJA</strong><br>
+                            Muito urgente<br>
+                            10 min
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="badge risk-amarelo p-2 w-100">
+                            <strong>AMARELO</strong><br>
+                            Urgente<br>
+                            60 min
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="badge risk-verde p-2 w-100">
+                            <strong>VERDE</strong><br>
+                            Pouco urgente<br>
+                            120 min
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="badge risk-azul p-2 w-100">
+                            <strong>AZUL</strong><br>
+                            Não urgente<br>
+                            240 min
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

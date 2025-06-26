@@ -1,0 +1,753 @@
+Utilização de agentes inteligentes na
+triagem de pacientes no sistema
+público de saúde
+
+Autor: Marx Haron Gomes Barbosa
+
+Coautor: Francisco Nauber Bernardo Gois
+
+Tema 2: TRANSFORMAÇÃO DIGITAL PARA OS CIDADÃOS
+
+Nº de páginas: 18
+
+Folha de Rosto
+Título do Trabalho: Utilização de agentes inteligentes na triagem de pacientes no
+sistema público de saúde
+
+Tema: TRANSFORMAÇÃO DIGITAL PARA OS CIDADÃOS
+
+Autor: Marx Haron Gomes Barbosa
+
+Currículo: Bacharel em Ciências da Computação pela Universidade Estadual do Ceará - UECE; Especialista em Gestão Pública pela Universidade Federal de Brasília UNB; Mestre em Engenharia de Software pela Universidade Estadual do Ceará - UECE;
+No setor privado, atuou em instituições financeiras, prestadoras de serviços públicos
+e de segurança da informação; Ingressou no Serpro em 2009, na área de prospecção
+de novas tecnologias (CETEC), migrando para a área de gestão em 2014. Atualmente é
+gerente de divisão de desenvolvimento da SUPFT, atendendo demandas da STN.
+
+Coautor: Francisco Nauber Bernardo Gois
+
+Currículo: Pós-doutor em Neurociência Aplicada pela University of Saint Joseph e
+doutor em Ciência e Tecnologia Aplicada pela Universidade de Fortaleza. Atua como
+pesquisador em Inteligência Artificial, com foco em modelos preditivos, IA explicável
+e soluções aplicadas à saúde e ao setor público. É auditor de controle interno com
+especialização em tecnologia da informação e inteligência artificial na Controladoria
+Geral do Estado do Ceará. Professor em programas de pós-graduação no Brasil e em
+Portugal, ministra disciplinas como Deep Learning, Big Data, Engenharia de Dados e
+Sistemas Inteligentes. Possui experiência prática em robótica, veículos autônomos,
+Spark, Kafka, LangChain e AutoML. É autor de artigos científicos e livros na área de IA
+e recebeu prêmios nas categorias Governo Eletrônico e Engenharia de Software.
+1/18
+
+Resumo
+A triagem atual de pacientes na rede pública de saúde brasileira apresenta deficiências significativas, notadamente na priorização de atendimentos, uso ineficiente de
+recursos e na ocorrência de judicializações que comprometem a equidade do sistema.
+O presente trabalho visa propor um modelo de barramento de IA com agentes inteligentes para triagem de pacientes no SUS, capazes de coletar, interpretar e cruzar
+dados clínicos fornecidos pelos próprios pacientes. Os agentes simulariam interações humanas, classificando casos conforme níveis de risco e emitindo alertas automatizados às unidades de saúde. Este sistema promoveria uma triagem mais justa e
+tecnicamente fundamentada, reduzindo a subjetividade e viabilizando o atendimento
+prioritário a casos com maior gravidade clínica. O Serpro, enquanto protagonista da
+transformação digital no âmbito do governo federal, possui um compromisso estratégico com o desenvolvimento de soluções tecnológicas que impactem positivamente a
+vida da população. Diante da reconhecida fragilidade do sistema público de saúde —
+especialmente no que se refere à triagem e à priorização de atendimentos —, a adoção do modelo proposto de inteligência artificial com agentes inteligentes representa
+uma inovação capaz de mitigar desigualdades, acelerar o atendimento de casos com
+maior gravidade e possibilitar a identificação precoce de doenças por meio da análise
+integrada de dados clínicos. A implementação dessa solução tecnológica permitiria
+ao Serpro atuar em colaboração com o Ministério da Saúde como provedor e gestor
+do barramento de IA, bem como responsável pelo desenvolvimento contínuo de interfaces modulares especializadas, adaptadas às diversas áreas clínicas, ampliando
+a escalabilidade e a efetividade do sistema.
+
+Palavras-chave: [Triagem de pacientes; Agentes Inteligentes; Alertas de dados clínicos.]
+
+2/18
+
+Sumário
+Resumo . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2
+
+1
+
+Introdução . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+5
+
+1.1
+
+Motivação . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+5
+
+1.2
+
+Objetivos Primários e Secundários . . . . . . . . . . . . . . . . . . . . . .
+
+6
+
+1.3
+
+Hipóteses . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+7
+
+1.4
+
+Apresentação da Estrutura do Artigo . . . . . . . . . . . . . . . . . . . . .
+
+8
+
+2 Fundamentação Teórica . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+8
+
+2.1
+
+Agentes Inteligentes: Conceitos Fundamentais e Arquiteturas . . . . . .
+
+8
+
+2.2
+
+Trabalhos Relacionados . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+9
+
+2.3
+
+Sistemas de Triagem Médica: Evolução e Desafios . . . . . . . . . . . . .
+
+9
+
+2.4
+
+Inteligência Artificial em Saúde: Estado da Arte . . . . . . . . . . . . . . .
+
+10
+
+2.5
+
+Framework LangChain: Potencial Tecnológico . . . . . . . . . . . . . . . .
+
+10
+
+2.6
+
+IA em Sistemas de Saúde Pública e Integração com o SUS . . . . . . . . .
+
+10
+
+2.7
+
+Aspectos Éticos, Regulatórios e de Monitoramento . . . . . . . . . . . . .
+
+10
+
+3 Materiais e Métodos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+12
+
+3.1
+
+Procedimento Experimental . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+12
+
+3.1.1
+
+Classificação de Risco (Alto, Moderado, Baixo) . . . . . . . . . . .
+
+12
+
+3.1.2
+
+Aderência ao Protocolo Oficial de Triagem de Manchester . . . .
+
+12
+
+3.1.3
+
+Coerência entre Sintomas e Suspeitas Diagnósticas . . . . . . . .
+
+13
+
+3.1.4
+
+Consistência nas Recomendações de Conduta . . . . . . . . . . .
+
+13
+
+3.2
+
+Arquitetura Geral do Sistema . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+14
+
+3.3
+
+Ambiente Tecnológico . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+14
+
+3.4
+
+Componentes Principais com LangChain . . . . . . . . . . . . . . . . . . .
+
+14
+
+3.5
+
+Procedimento Experimental . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+15
+
+3.6
+
+Avaliação Quantitativa . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+15
+
+3.7
+
+Ferramentas Complementares . . . . . . . . . . . . . . . . . . . . . . . . .
+
+15
+
+3
+
+3.8
+
+Reprodutibilidade . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+16
+
+4 Proposta . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+16
+
+5 Resultados . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+16
+
+6 Conclusão . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+16
+
+4/18
+
+1
+
+Introdução
+
+1.1
+
+Motivação. O Sistema Único de Saúde (SUS) enfrenta há décadas desafios es-
+
+truturais profundos, que resultam em impactos concretos e dolorosos para milhões
+de brasileiros. A espera por atendimento médico na rede pública frequentemente se
+estende por semanas, meses e, em muitos casos, até anos [1, 2]. Em 2024, o tempo médio de espera por uma consulta especializada era de 57 dias, chegando a ultrapassar
+150 dias em regiões mais críticas. Cirurgias eletivas, que não deveriam comprometer
+a vida do paciente, acumulavam atrasos de mais de 600 dias em determinados casos [3, 4]. Exames de imagem, fundamentais para o diagnóstico precoce, levavam em
+média 80 dias para serem realizados.
+A esses entraves soma-se um problema crônico e invisível: a subnotificação e a
+fragmentação dos dados clínicos. De acordo com o Sistema Nacional de Regulação
+(Sisreg), 13 das 27 unidades federativas brasileiras não fornecem informações completas sobre os pacientes na fila de espera [1]. Isso compromete diretamente a triagem
+e a priorização dos casos mais urgentes, promovendo uma lógica de atendimento
+desorganizada e injusta.
+Para enfrentar esse cenário, o governo federal tem implementado iniciativas como
+o Programa Nacional de Redução de Filas e o Mais Acesso a Especialistas [5]. Embora
+relevantes, essas ações têm efeito limitado quando não estão acompanhadas de uma
+transformação digital sistêmica. A raiz do problema permanece: a inexistência de
+um modelo inteligente, padronizado e automatizado de triagem médica que garanta
+justiça, agilidade e precisão.
+É exatamente nesse ponto que a inteligência artificial (IA) desponta como uma ferramenta estratégica para o futuro da saúde pública. Soluções baseadas em agentes
+inteligentes podem padronizar critérios de risco, reduzir a variabilidade entre profissionais — que chega a 40% em alguns contextos clínicos [6] —, e realizar triagens em
+tempo real, com base em dados epidemiológicos, históricos clínicos e protocolos médicos. Em um sistema que realiza mais de 2,8 bilhões de procedimentos ambulatoriais
+5/18
+
+por ano [7], a automação desse processo não é apenas desejável: é imperativa.
+Esse cenário abre também uma oportunidade estratégica de negócio para o Serpro (Serviço Federal de Processamento de Dados). Como principal parceiro tecnológico do governo federal, o Serpro está em posição privilegiada para liderar o desenvolvimento de uma plataforma nacional de triagem inteligente, interoperável com
+sistemas já existentes como o Sisreg, e capaz de integrar-se aos prontuários eletrônicos e aos bancos de dados do SUS.
+Mais do que cumprir sua missão institucional de apoiar políticas públicas com
+soluções tecnológicas robustas, o Serpro pode alavancar modelos de negócio sustentáveis e escaláveis, incluindo:
+• Licenciamento de soluções para estados e municípios;
+• Prestação de serviços em nuvem;
+• Análises preditivas e populacionais para gestores do SUS;
+• Integração com dashboards e ferramentas de inteligência para a tomada de decisão.
+Além disso, ao consolidar essa expertise, o Serpro pode também expandir sua atuação internacional, exportando tecnologia pública de ponta para sistemas de saúde
+de países em desenvolvimento que enfrentam gargalos semelhantes.
+Dessa forma, a motivação deste trabalho vai além da evidente urgência social de
+melhorar o acesso à saúde no Brasil. Ela se ancora na viabilidade técnica, no potencial de impacto social e econômico, e na oportunidade real de posicionar o Serpro
+como protagonista da transformação digital do SUS, por meio do uso estratégico da
+inteligência artificial aplicada à triagem médica.
+1.2
+
+Objetivos Primários e Secundários. Objetivo Primário:
+• Desenvolver e avaliar um sistema baseado em agentes inteligentes para otimização da triagem de pacientes no sistema público de saúde brasileiro, demons6/18
+
+trando sua viabilidade técnica, eficácia clínica e potencial de implementação em
+escala nacional.
+Objetivos Secundários:
+• Realizar uma análise abrangente do estado da arte sobre triagem médica baseada em inteligência artificial, com foco em aplicações adaptáveis ao contexto
+do SUS.
+• Projetar uma arquitetura de sistema baseada em agentes inteligentes considerando interoperabilidade com sistemas legados, escalabilidade e sustentabilidade.
+• Implementar um protótipo funcional utilizando tecnologias modernas de IA,
+como processamento de linguagem natural e algoritmos de aprendizado de máquina.
+• Avaliar experimentalmente o desempenho do sistema proposto por meio de simulações com dados reais e comparação com métodos tradicionais.
+• Estimar o impacto potencial da implementação do sistema em termos de redução de custos, melhoria na qualidade do atendimento e benefícios à saúde
+populacional.
+1.3
+
+Hipóteses. Com base nas motivações apresentadas e nos avanços da literatura
+
+científica, propõem-se as seguintes hipóteses:
+• H1: Um sistema baseado em agentes inteligentes pode aumentar a precisão da
+triagem médica no SUS.
+• H2: A adoção de triagem automatizada pode reduzir significativamente o tempo
+médio de espera por atendimento.
+• H3: A implementação desses agentes é economicamente viável e pode reduzir
+custos operacionais do SUS em até 30%.
+7/18
+
+• H4: É possível desenvolver uma arquitetura interoperável com os sistemas legados do SUS, garantindo escalabilidade e sustentabilidade.
+1.4
+
+Apresentação da Estrutura do Artigo. Este artigo está estruturado da seguinte
+
+forma:
+• A Seção 2 apresenta a Fundamentação Teórica, abordando estudos sobre agentes inteligentes, triagem médica automatizada e aplicações de IA na saúde pública.
+• A Seção 3 descreve os Materiais e Métodos utilizados, incluindo a arquitetura
+proposta, ferramentas adotadas e protocolos de avaliação.
+• A Seção 4 detalha os Resultados obtidos a partir do protótipo funcional desenvolvido e sua avaliação experimental.
+• A Seção 5 traz a Conclusão, com discussão das contribuições do trabalho, limitações identificadas e sugestões para pesquisas futuras.
+
+2 Fundamentação Teórica
+A fundamentação teórica deste trabalho baseia-se na convergência de três domínios principais: teoria de agentes inteligentes, sistemas de triagem médica e tecnologias de inteligência artificial aplicadas à saúde pública. Esta seção revisa conceitos
+fundamentais, trabalhos relacionados, frameworks tecnológicos e desafios éticos e
+operacionais para sustentar a proposta deste estudo.
+2.1
+
+Agentes Inteligentes: Conceitos Fundamentais e Arquiteturas. Segundo Russell
+
+e Norvig [8], agentes inteligentes são entidades que percebem seu ambiente através
+de sensores e agem sobre esse ambiente por meio de atuadores, buscando atingir
+o melhor resultado ou, sob incerteza, o melhor resultado esperado. Wooldridge [9]
+
+8/18
+
+complementa, definindo agentes como sistemas situados em ambientes, capazes de
+ações autônomas para atingir objetivos, com percepção e tomada de decisão.
+No escopo deste trabalho, essas definições se aplicam à interação médico-paciente
+por meio de agentes inteligentes que coletam informações clínicas e atuam propondo
+análises e priorizações com base na gravidade do caso.
+Huang et al. [10] identificam sete propriedades-chave desses agentes em saúde:
+reatividade, proatividade, habilidade social, mobilidade, veracidade, benevolência e
+racionalidade. Arquiteturas variam de agentes reflexivos simples a baseados em modelo, objetivos e utilidade, sendo os últimos os mais aptos a otimizar múltiplos critérios clínicos simultaneamente.
+2.2
+
+Trabalhos Relacionados. Diversos estudos recentes exploram agentes inteli-
+
+gentes como apoio à decisão clínica. Lopes et al. [11] propõem agentes para triagem
+de pacientes com suspeita de COVID-19, enquanto Lemos et al. [? ] analisam chatbots
+como ferramenta auxiliar na clínica. Brito et al. [12] destacam o uso de agentes para
+prognóstico de doenças neurodegenerativas.
+Lemes et al. [13] exploram o uso de IA em serviços de saúde pública no Brasil,
+como nos projetos e-SUS e Conecte SUS, com foco em integrar dados de usuários
+e permitir acesso unificado por profissionais. Este trabalho propõe complementar
+tais iniciativas ao aplicar agentes inteligentes na análise desses dados, com foco na
+priorização clínica automatizada.
+2.3
+
+Sistemas de Triagem Médica: Evolução e Desafios. A triagem médica evoluiu
+
+desde os contextos militares napoleônicos até os sistemas padronizados atuais como
+o Manchester Triage System (MTS) e o Emergency Severity Index (ESI). Esses modelos, embora baseados em algoritmos estruturados, sofrem com variabilidade interobservador de até 40
+Tyler et al. [14] identificam quatro limitações principais nos sistemas tradicionais:
+subjetividade do julgamento humano, dificuldade em integrar dados complexos, in-
+
+9/18
+
+consistência temporal e falta de aprendizado adaptativo.
+2.4
+
+Inteligência Artificial em Saúde: Estado da Arte. Com a digitalização de pron-
+
+tuários e aumento da capacidade computacional, a IA tem sido aplicada com sucesso
+em diagnóstico por imagem, suporte à decisão e medicina personalizada [15]. Em triagem, abordagens incluem NLP para extrair sintomas de textos, como demonstrado
+por Kwon et al. [16], e algoritmos supervisionados como Random Forests e redes
+neurais para prever desfechos [17, 18].
+Soluções híbridas também são promissoras: Fernandes et al. [19] propõem combinação de regras clínicas e machine learning, com 92
+2.5
+
+Framework LangChain: Potencial Tecnológico. LangChain permite construção
+
+modular de pipelines baseados em modelos de linguagem. Seus componentes — Models, Prompts, Chains, Agents, Memory e Indexes — facilitam desde a coleta de sintomas via linguagem natural até a tomada de decisão embasada em evidências [20].
+A arquitetura do LangChain permite integração fluida com bases de conhecimento e
+sistemas clínicos.
+2.6
+
+IA em Sistemas de Saúde Pública e Integração com o SUS. A aplicação de IA em
+
+saúde pública requer considerar escalabilidade, equidade e integração com sistemas
+existentes. Estudos como os de Rajkomar et al. [21] e o caso do NHS britânico mostram reduções reais de tempo de triagem, embora enfrentem desafios de integração
+e aceitação profissional.
+No Brasil, o Sisreg processa milhões de solicitações anuais e sua integração com
+IA exige adoção de padrões como HL7 FHIR [22]. A heterogeneidade dos sistemas de
+prontuário eletrônico também representa um desafio superável com padronização e
+APIs unificadas.
+2.7
+
+Aspectos Éticos, Regulatórios e de Monitoramento. A implementação de IA em
+
+triagem médica exige consideração de beneficência, não-maleficência, autonomia,
+10/18
+
+justiça e explicabilidade [23]. Estudos como o de Van der Stigchel et al. [24] questionam a dependência de humanos para correção de vieses, apontando para necessidade de mecanismos automatizados.
+Regulamentações como o AI Act europeu e o Marco Legal da IA no Brasil impõem
+exigências de transparência, auditoria e conformidade [25, 26]. Modelos de implementação (centralizado, federado, distribuído) influenciam escalabilidade e manutenção [27].
+Por fim, métricas de desempenho e mecanismos de monitoramento são essenciais
+para evitar deriva de modelo. Finlayson et al. [28] demonstram degradação significativa de modelos médicos em 12-18 meses, exigindo atualização contínua e governança
+adequada dos sistemas automatizados.
+Tabela 1: Comparação entre os trabalhos relacionados e a proposta atual
+Trabalho
+
+Domínio
+
+Uso de Agentes
+
+Foco
+
+Abordagem Tecnológica
+
+Aplicação de critérios da
+
+Regras clínicas baseadas em
+
+OMS
+
+sintomas
+
+Comunicação e orienta-
+
+NLP e interfaces conversacio-
+
+ção ao paciente
+
+nais
+
+Detecção precoce e aná-
+
+Modelos preditivos com agen-
+
+lise de estágios da do-
+
+tes inteligentes
+
+Inteligentes
+Lopes et al. (COVID-
+
+Triagem de paci-
+
+19)
+
+entes
+
+com
+
+Sim
+
+sus-
+
+peita de COVID-19
+Lemos et al.
+
+(Chat-
+
+bots)
+
+Apoio clínico via
+
+Sim (Chatbots)
+
+agentes conversacionais
+
+Brito et al. (Neurode-
+
+Prognóstico
+
+generativas)
+
+doenças neurode-
+
+de
+
+Sim
+
+generativas
+Lemes et al.
+SUS/Conecte SUS)
+
+(e-
+
+ença
+
+Integração de da-
+
+Não (Foco em
+
+Centralização e acesso a
+
+Sistemas de informação e in-
+
+dos de saúde pú-
+
+TI)
+
+dados clínicos
+
+teroperabilidade
+
+Triagem automati-
+
+Sim (multifunci-
+
+Priorização clínica com
+
+Agentes inteligentes com IA,
+
+zada no SUS
+
+onal)
+
+base em critérios objeti-
+
+NLP, aprendizado de máquina
+
+vos
+
+e integração com sistemas le-
+
+blica
+Proposta Atual
+
+gados
+
+11/18
+
+3 Materiais e Métodos
+3.1
+
+Procedimento Experimental. Foram definidos 30 casos simulados de pacien-
+
+tes, abrangendo diferentes níveis de gravidade e sintomas clínicos — incluindo, por
+exemplo, dor torácica, febre persistente, dispneia, náuseas, sangramentos e alterações neurológicas agudas. Esses cenários foram construídos com base em casos reais
+frequentemente encontrados em unidades de pronto atendimento do SUS. Os dados
+de entrada foram inseridos sequencialmente no sistema proposto, e os resultados
+gerados automaticamente foram avaliados segundo quatro critérios fundamentais,
+detalhados a seguir.
+3.1.1
+
+Classificação de Risco (Alto, Moderado, Baixo)
+
+O sistema de triagem baseado em agentes inteligentes realiza uma análise de risco
+para cada caso, atribuindo uma pontuação de gravidade clínica. Com base nessa pontuação, os casos são automaticamente categorizados em três níveis: Alto Risco, para
+quadros críticos e com potencial de evolução rápida; Moderado Risco, para situações
+que requerem avaliação médica com brevidade; e Baixo Risco, para casos com sintomas leves ou autolimitados.
+A acurácia da classificação foi aferida por meio de comparação cega com dois especialistas clínicos, que também categorizaram os mesmos casos sem acesso prévio
+às decisões do sistema. A concordância intersistema foi medida por meio de métricas
+como acurácia, precision, recall e F1-score.
+3.1.2 Aderência ao Protocolo Oficial de Triagem de Manchester
+Para avaliar a fidelidade do sistema à prática clínica consolidada, verificou-se a
+aderência ao Manchester Triage System (MTS), protocolo amplamente adotado em serviços de urgência e emergência. O sistema implementa regras baseadas em critérios
+de gravidade, tempo de evolução e sintomas-guia, permitindo replicar os fluxogramas
+
+12/18
+
+decisórios do MTS.
+Cada classificação de risco foi auditada quanto à compatibilidade com os algoritmos oficiais do MTS. O percentual de aderência foi calculado com base em mapeamento direto entre os sintomas apresentados e os grupos discriminadores do protocolo Manchester.
+3.1.3
+
+Coerência entre Sintomas e Suspeitas Diagnósticas
+
+Além da classificação de risco, o sistema fornece hipóteses diagnósticas baseadas
+na interpretação dos sintomas relatados. Esta etapa foi avaliada sob o critério de
+coerência clínica, considerando se os diagnósticos sugeridos são plausíveis e compatíveis com o quadro clínico descrito.
+A análise foi conduzida por especialistas que validaram, de forma independente,
+a pertinência das hipóteses diagnósticas geradas. A coerência foi considerada adequada quando os diagnósticos propostos estavam entre as primeiras três hipóteses
+esperadas por profissionais humanos para o mesmo conjunto de sintomas.
+3.1.4
+
+Consistência nas Recomendações de Conduta
+
+O sistema também propõe condutas clínicas específicas, tais como: encaminhamento imediato, observação em unidade básica, reavaliação programada ou autocuidado com sinais de alerta. A consistência dessas recomendações foi analisada com
+base em protocolos clínicos oficiais do Ministério da Saúde e diretrizes internacionais.
+Especialistas revisaram as orientações fornecidas para cada caso e classificaram
+a conduta como apropriada, insegura ou excessiva. A taxa de recomendações apropriadas foi registrada como indicador de conformidade clínica. Casos com decisões
+incoerentes foram discutidos qualitativamente para identificar limitações do modelo.
+Em conjunto, esses critérios permitiram uma avaliação abrangente da capacidade
+do sistema de triagem em simular decisões clínicas confiáveis, seguras e alinhadas às
+práticas consolidadas na saúde pública.
+13/18
+
+3.2
+
+Arquitetura Geral do Sistema. O sistema proposto foi desenvolvido com foco em
+
+triagem médica inteligente e automática, utilizando modelos de linguagem natural e
+agentes baseados em regras clínicas. A arquitetura é composta por quatro módulos
+principais: (i) entrada de sintomas e sinais clínicos, (ii) motor de decisão, (iii) interface
+de integração com bases de dados e (iv) sistema de priorização com pontuação de
+risco.
+3.3
+
+Ambiente Tecnológico. Todos os experimentos foram realizados em ambiente
+
+Python 3.10, com uso da biblioteca LangChain para orquestração de fluxos conversacionais com modelos de linguagem baseados em LLMs. O modelo base utilizado foi
+o gpt-4 via API da OpenAI, integrado ao LangChain por meio do conector ChatOpenAI.
+A base de conhecimento clínica foi construída com base em protocolos do Ministério
+da Saúde e guidelines internacionais, estruturados em um vetor semântico usando
+FAISS para recuperação por similaridade.
+3.4
+
+Componentes Principais com LangChain. O fluxo de triagem foi implementado
+
+com os seguintes componentes do LangChain:
+• PromptTemplate: responsável por guiar o modelo com instruções específicas
+para identificar sinais críticos, suspeitas diagnósticas e riscos associados.
+• LLMChain: cadeia principal que integra o prompt ao modelo LLM, gerando respostas interpretadas pelo sistema de triagem.
+• ConversationBufferMemory: memória temporal da sessão, armazenando os sintomas relatados em sequência pelo paciente.
+• RetrievalQA: módulo responsável por acessar informações clínicas armazenadas em vetor semântico, baseado na similaridade com os sintomas apresentados.
+
+14/18
+
+• AgentExecutor: estrutura responsável por integrar ferramentas adicionais (como
+consulta a bases de medicamentos ou protocolos de prioridade), simulando
+uma decisão médica contextual.
+3.5
+
+Procedimento Experimental. Foram definidos 30 casos simulados de pacientes
+
+com diferentes níveis de gravidade e sintomas (ex.: dor torácica, febre, dispneia, náusea, sangramentos), inspirados em situações reais de pronto atendimento. Os casos
+foram inseridos sequencialmente no sistema, e as saídas foram avaliadas quanto à:
+• Classificação de risco (Alto, Moderado, Baixo)
+• Aderência ao protocolo oficial de triagem de Manchester
+• Coerência entre sintomas e suspeitas diagnósticas
+• Consistência nas recomendações de conduta
+As recomendações do sistema foram comparadas com o julgamento de dois especialistas clínicos, de forma cega, para avaliar a acurácia e a concordância intersistema.
+3.6
+
+Avaliação Quantitativa. A acurácia da triagem automática foi calculada como a
+
+proporção de concordância entre o modelo e os especialistas. Também foram utilizadas métricas como precision, recall e F1-score para cada nível de risco. A variabilidade
+intra-modelo foi avaliada repetindo os testes com variações nos prompts e na ordem
+de entrada dos sintomas, mensurando a estabilidade das decisões.
+3.7
+
+Ferramentas Complementares. Além do LangChain, foram utilizadas as seguin-
+
+tes bibliotecas de apoio:
+• Pandas e NumPy para organização dos dados de entrada e análise estatística.
+• Matplotlib para geração de gráficos comparativos entre a decisão humana e a
+automatizada.
+15/18
+
+• Streamlit para desenvolvimento de uma interface simples de simulação em
+tempo real.
+3.8
+
+Reprodutibilidade. Todo o código-fonte está documentado e será disponibili-
+
+zado em repositório público com instruções para replicação dos testes e reexecução
+dos casos simulados. Os dados de entrada são sintéticos, sem envolvimento de dados
+reais de pacientes, garantindo o cumprimento de princípios éticos e de LGPD.
+
+4
+
+Proposta
+
+5
+
+Resultados
+
+6
+
+Conclusão
+loren ipsun tot
+
+Referências
+[1] Associação Paulista de Medicina. Fila do sus: Falta de informação agrava o
+problema. https://www.apm.org.br/noticia/fila-do-sus/, 2025. Disponível em:
+https://www.apm.org.br/noticia/fila-do-sus/.
+[2] CNN Brasil.
+
+Mais de 1 milhão aguardam na fila por cirurgia no sus.
+
+https://www.cnnbrasil.com.br/, 2025.
+
+Disponível em:
+
+https://www.cnnbra-
+
+Cirurgias eletivas no brasil:
+
+espera e desafios.
+
+sil.com.br/.
+[3] Sou Enfermagem.
+
+https://www.souenfermagem.com.br/, 2025. Disponível em: https://www.souenfermagem.com.br/.
+
+16/18
+
+[4] Rádio Tucunaré.
+
+Pacientes esperam mais de 600 dias por cirurgia no sus.
+
+https://www.radiotucunare.com.br/, 2024. Disponível em: https://www.radiotucunare.com.br/.
+[5] Brasil. Ministério da Saúde. Todos os estados brasileiros receberam recursos do
+ministério da saúde para reduzir fila de espera por cirurgias no sus, 2023. Acesso
+em: 6 jun. 2025.
+[6] João Silva and Maria Andrade. Variabilidade inter-observador em sistemas de
+triagem no brasil. Revista Brasileira de Saúde Pública, 58:e230045, 2024.
+[7] DATASUS. Informações de saúde (tabnet). http://www2.datasus.gov.br/, 2025.
+[8] Stuart Russell and Peter Norvig. Artificial Intelligence: A Modern Approach. Pearson, 3 edition, 2013.
+[9] Michael Wooldridge. An Introduction to MultiAgent Systems. John Wiley & Sons,
+2002.
+[10] L. Huang and D. Kim. Frameworks for ai agents in clinical settings. Health Informatics Journal, 29(1):12–28, 2023.
+[11] F. et al. Lopes. Uso de agentes inteligentes na triagem de pacientes com suspeita
+de covid-19. https://www.exemplo.com/ercemapi, 2020.
+[12] R. Brito and A. Silva. Agentes inteligentes no diagnóstico de doenças neurodegenerativas. Cadernos de Saúde Digital, 7(1):33–44, 2021.
+[13] C. et al. Lemes. Uso de inteligência artificial na administração pública brasileira.
+In Anais do Congresso Brasileiro de Informática em Saúde, pages 150–159, 2020.
+[14] M. Tyler and A. Becker. Artificial intelligence in emergency triage: A systematic
+review. International Journal of Medical Informatics, 162:104737, 2022.
+[15] Eric Topol. Deep Medicine: How Artificial Intelligence Can Make Healthcare Human
+Again. Basic Books, 2019.
+17/18
+
+[16] J. et al. Kwon. Natural language processing for automated symptom classification.
+Journal of Biomedical Informatics, 108:103512, 2020.
+[17] S. et al. Hong. Machine learning model for predicting hospitalization from triage.
+Health Data Science, 5:e67, 2021.
+[18] J. et al. Levin. Deep learning for clinical deterioration prediction. Medical AI Research, 3(4):45–60, 2022.
+[19] L. Fernandes and A. Ribeiro. Sistema híbrido para triagem com ia e regras clínicas.
+Cadernos de Saúde Coletiva, 30(3):230–240, 2022.
+[20] Harrison Chase. Langchain documentation. https://www.langchain.com/, 2023.
+[21] A. et al. Rajkomar. Scalable and accurate deep learning with electronic health
+records. NPJ Digital Medicine, 2(1):1–10, 2019.
+[22] Health Level Seven International. Hl7 fhir standard. https://www.hl7.org/fhir/,
+2022.
+[23] L. et al. Floridi. Ai4people—an ethical framework for a good ai society. Minds and
+Machines, 28(4):689–707, 2018.
+[24] S. et al. Van der Stigchel. Human oversight in ai medical triage systems. AI in
+Healthcare, 11:21–34, 2022.
+[25] European Commission. Ai act proposal. https://artificialintelligenceact.eu/, 2023.
+[26] Governo Federal do Brasil.
+
+Marco legal da inteligência artificial.
+
+https://www.gov.br/justica/ai-marco-legal, 2025.
+[27] J. et al. Christensen. Strategies for ai implementation in national health systems.
+Digital Public Health Journal, 6:55–67, 2021.
+[28] S. et al. Finlayson. The clinician and dataset shift in ai systems. The Lancet Digital
+Health, 3(8):e494–e501, 2021.
+18/18
+
+

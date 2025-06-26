@@ -1,0 +1,198 @@
+{% extends "base.html" %}
+
+{% block title %}Nova Triagem - Sistema de Triagem SUS{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h4><i class="fas fa-user-md"></i> Nova Triagem de Paciente</h4>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('realizar_triagem') }}">
+                    <!-- Dados do Paciente -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="patient_id" class="form-label">ID do Paciente</label>
+                            <input type="text" class="form-control" id="patient_id" name="patient_id" required>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="age_range" class="form-label">Faixa Etária</label>
+                            <select class="form-select" id="age_range" name="age_range" required>
+                                <option value="">Selecione...</option>
+                                <option value="0-17">0-17 anos</option>
+                                <option value="18-30">18-30 anos</option>
+                                <option value="31-45">31-45 anos</option>
+                                <option value="46-60">46-60 anos</option>
+                                <option value="61-75">61-75 anos</option>
+                                <option value="76+">76+ anos</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="gender" class="form-label">Sexo</label>
+                            <select class="form-select" id="gender" name="gender" required>
+                                <option value="">Selecione...</option>
+                                <option value="M">Masculino</option>
+                                <option value="F">Feminino</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Queixa Principal -->
+                    <div class="mb-3">
+                        <label for="chief_complaint" class="form-label">Queixa Principal</label>
+                        <textarea class="form-control" id="chief_complaint" name="chief_complaint" rows="3" required></textarea>
+                    </div>
+
+                    <!-- Sintomas -->
+                    <div class="mb-3">
+                        <label class="form-label">Sintomas Apresentados</label>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="symptoms" value="dor torácica" id="symptom1">
+                                    <label class="form-check-label" for="symptom1">Dor torácica</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="symptoms" value="dificuldade respiratória" id="symptom2">
+                                    <label class="form-check-label" for="symptom2">Dificuldade respiratória</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="symptoms" value="febre" id="symptom3">
+                                    <label class="form-check-label" for="symptom3">Febre</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="symptoms" value="dor abdominal" id="symptom4">
+                                    <label class="form-check-label" for="symptom4">Dor abdominal</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="symptoms" value="cefaleia" id="symptom5">
+                                    <label class="form-check-label" for="symptom5">Cefaleia</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="symptoms" value="vômitos" id="symptom6">
+                                    <label class="form-check-label" for="symptom6">Vômitos</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="symptoms" value="diarreia" id="symptom7">
+                                    <label class="form-check-label" for="symptom7">Diarreia</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="symptoms" value="tosse" id="symptom8">
+                                    <label class="form-check-label" for="symptom8">Tosse</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="symptoms" value="tontura" id="symptom9">
+                                    <label class="form-check-label" for="symptom9">Tontura</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="symptoms" value="fadiga" id="symptom10">
+                                    <label class="form-check-label" for="symptom10">Fadiga</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="symptoms" value="dor muscular" id="symptom11">
+                                    <label class="form-check-label" for="symptom11">Dor muscular</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="symptoms" value="outros" id="symptom12">
+                                    <label class="form-check-label" for="symptom12">Outros</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comorbidades -->
+                    <div class="mb-3">
+                        <label class="form-label">Comorbidades</label>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="comorbidities" value="diabetes" id="comorb1">
+                                    <label class="form-check-label" for="comorb1">Diabetes</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="comorbidities" value="hipertensão" id="comorb2">
+                                    <label class="form-check-label" for="comorb2">Hipertensão</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="comorbidities" value="cardiopatia" id="comorb3">
+                                    <label class="form-check-label" for="comorb3">Cardiopatia</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="comorbidities" value="asma" id="comorb4">
+                                    <label class="form-check-label" for="comorb4">Asma</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="comorbidities" value="dpoc" id="comorb5">
+                                    <label class="form-check-label" for="comorb5">DPOC</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="comorbidities" value="obesidade" id="comorb6">
+                                    <label class="form-check-label" for="comorb6">Obesidade</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="comorbidities" value="depressão" id="comorb7">
+                                    <label class="form-check-label" for="comorb7">Depressão</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="comorbidities" value="ansiedade" id="comorb8">
+                                    <label class="form-check-label" for="comorb8">Ansiedade</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="comorbidities" value="nenhuma" id="comorb9">
+                                    <label class="form-check-label" for="comorb9">Nenhuma</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sinais Vitais -->
+                    <h5>Sinais Vitais</h5>
+                    <div class="row mb-3">
+                        <div class="col-md-2">
+                            <label for="temperature" class="form-label">Temperatura (°C)</label>
+                            <input type="number" step="0.1" class="form-control" id="temperature" name="temperature" value="36.5" required>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="heart_rate" class="form-label">FC (bpm)</label>
+                            <input type="number" class="form-control" id="heart_rate" name="heart_rate" value="70" required>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="bp_systolic" class="form-label">PA Sist. (mmHg)</label>
+                            <input type="number" class="form-control" id="bp_systolic" name="bp_systolic" value="120" required>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="bp_diastolic" class="form-label">PA Diast. (mmHg)</label>
+                            <input type="number" class="form-control" id="bp_diastolic" name="bp_diastolic" value="80" required>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="respiratory_rate" class="form-label">FR (irpm)</label>
+                            <input type="number" class="form-control" id="respiratory_rate" name="respiratory_rate" value="16" required>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="oxygen_saturation" class="form-label">SatO2 (%)</label>
+                            <input type="number" class="form-control" id="oxygen_saturation" name="oxygen_saturation" value="98" required>
+                        </div>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-stethoscope"></i> Realizar Triagem
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
