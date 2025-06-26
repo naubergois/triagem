@@ -304,7 +304,7 @@ class IntelligentTriageAgent:
         prompt = PromptTemplate.from_template("""
         Você é um agente inteligente especializado em triagem médica no SUS.
         Sua função é analisar dados de pacientes e classificar o risco conforme o protocolo de Manchester.
-        
+
         Você tem acesso às seguintes ferramentas:
         {tools}
         
@@ -318,11 +318,14 @@ class IntelligentTriageAgent:
         ... (este Pensamento/Ação/Entrada da Ação/Observação pode repetir N vezes)
         Pensamento: Agora sei a resposta final
         Resposta Final: a resposta final para a pergunta original
-        
+
         Pergunta: {input}
         Pensamento: {agent_scratchpad}
         """)
-        
+        tools_str = "\n".join(f"{t.name}: {t.description}" for t in self.tools)
+        tool_names = ", ".join(t.name for t in self.tools)
+        prompt = prompt.partial(tools=tools_str, tool_names=tool_names)
+
         return create_react_agent(self.llm, self.tools, prompt)
     
     def perform_triage(self, patient_id: str) -> TriageResult:
