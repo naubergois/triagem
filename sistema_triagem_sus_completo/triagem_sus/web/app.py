@@ -6,6 +6,9 @@ Interface web usando Flask para demonstração do sistema
 from flask import Flask, render_template, request, jsonify, redirect, url_for
 import sys
 import os
+from io import StringIO
+from contextlib import redirect_stdout
+
 # Adicionar o diretório pai ao path para importar módulos antes dos imports locais
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import json
@@ -223,23 +226,31 @@ def retrain_models():
 
 @app.route('/train/diabetes')
 def train_diabetes():
-    acc = diabetes_model.train()
-    path = os.path.join(os.path.dirname(__file__), '..', 'models', 'diabetes_model.pkl')
-    diabetes_model.save(path)
-    return redirect(url_for('retrain_models'))
+    buffer = StringIO()
+    with redirect_stdout(buffer):
+        acc = diabetes_model.train()
+        path = os.path.join(os.path.dirname(__file__), '..', 'models', 'diabetes_model.pkl')
+        diabetes_model.save(path)
+        print(f"Acurácia final: {acc:.4f}")
+    logs = buffer.getvalue().splitlines()
+    return render_template('train_result.html', logs=logs, accuracy=acc, model='Diabetes')
 
 
 @app.route('/train/pneumonia')
 def train_pneumonia():
     data_dir = os.path.join(os.path.dirname(__file__), '..', 'data', 'chest_xray')
+    buffer = StringIO()
     try:
-        acc = pneumonia_model.train(data_dir)
+        with redirect_stdout(buffer):
+            acc = pneumonia_model.train(data_dir)
+            path = os.path.join(os.path.dirname(__file__), '..', 'models', 'pneumonia_model.pt')
+            pneumonia_model.save(path)
+            print(f"Acurácia final: {acc:.4f}")
     except FileNotFoundError as e:
         return jsonify({'error': str(e)}), 500
 
-    path = os.path.join(os.path.dirname(__file__), '..', 'models', 'pneumonia_model.pt')
-    pneumonia_model.save(path)
-    return redirect(url_for('retrain_models'))
+    logs = buffer.getvalue().splitlines()
+    return render_template('train_result.html', logs=logs, accuracy=acc, model='Pneumonia')
 
 
 @app.route('/fila')
