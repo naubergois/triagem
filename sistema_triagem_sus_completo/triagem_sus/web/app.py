@@ -47,8 +47,7 @@ def load_triage_agent():
         if os.path.exists(model_path):
             diabetes_model.load(model_path)
         else:
-            diabetes_model.train()
-            diabetes_model.save(model_path)
+            print("Modelo de diabetes não encontrado. Etapa de pontuação será ignorada.")
 
         pneumo_path = os.path.join(os.path.dirname(__file__), '..', 'models', 'pneumonia_model.pt')
         if os.path.exists(pneumo_path):
@@ -95,10 +94,12 @@ def realizar_triagem():
         # Simular triagem (em um sistema real, usaria o agente)
         result = simulate_triage(patient_data)
 
-        # Calcular probabilidade de diabetes
-        age_val = age_range_to_value(patient_data['age_range'])
-        bp_val = patient_data['vital_signs']['blood_pressure_systolic']
-        diabetes_score = diabetes_model.predict_proba(age_val, bp_val)
+        # Calcular probabilidade de diabetes, se o modelo estiver disponível
+        diabetes_score = None
+        if diabetes_model.is_trained():
+            age_val = age_range_to_value(patient_data['age_range'])
+            bp_val = patient_data['vital_signs']['blood_pressure_systolic']
+            diabetes_score = diabetes_model.predict_proba(age_val, bp_val)
 
         # Adicionar à fila de prioridade
         heappush(patient_queue, (result['priority'], {
@@ -263,6 +264,9 @@ def fila_prioridade():
 @app.route('/explicacao/<patient_id>')
 def explicacao_paciente(patient_id: str):
     """Gera explicação do risco de diabetes para um paciente da fila"""
+    if not diabetes_model.is_trained():
+        return jsonify({'error': 'Modelo de diabetes não treinado'}), 400
+
     for _, item in patient_queue:
         if item['patient_id'] == patient_id:
             texto = diabetes_agent.get_explanation(item['data'])

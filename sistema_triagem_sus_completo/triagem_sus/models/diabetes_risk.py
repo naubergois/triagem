@@ -17,6 +17,10 @@ class DiabetesRiskModel:
     model: Optional[LogisticRegression] = None
     scaler: Optional[StandardScaler] = None
 
+    def is_trained(self) -> bool:
+        """Indica se o modelo já foi treinado e possui scaler."""
+        return self.model is not None and self.scaler is not None
+
     def train(self) -> float:
         """Treina o modelo usando o dataset de exemplo do scikit-learn."""
         print("Carregando dataset de diabetes...")
