@@ -1,6 +1,7 @@
 import os
 import pickle
 from dataclasses import dataclass
+from typing import Optional
 
 import numpy as np
 from sklearn.datasets import load_diabetes
@@ -13,8 +14,8 @@ from sklearn.preprocessing import StandardScaler
 class DiabetesRiskModel:
     """Modelo simples para previsão de risco de diabetes."""
 
-    model: LogisticRegression | None = None
-    scaler: StandardScaler | None = None
+    model: Optional[LogisticRegression] = None
+    scaler: Optional[StandardScaler] = None
 
     def train(self) -> float:
         """Treina o modelo usando o dataset de exemplo do scikit-learn."""
