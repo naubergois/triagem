@@ -146,6 +146,19 @@ utilizando a API da OpenAI, crie um arquivo `.env` com a variável
 python agents/patient_analysis_agent.py
 ```
 
+### 5. Exemplo Rápido
+
+Para uma demonstração simples, execute o script em `examples/quickstart.py`.
+Ele utiliza um pequeno conjunto de pacientes de amostra e permite incluir uma
+nova triagem interativamente. Assim que os dados do novo paciente são
+informados, o agente gera uma avaliação imediata. Todos os resultados são
+avaliados com a OpenAI e um gráfico de pontuação é gerado. Certifique-se de ter
+a variável de ambiente `OPENAI_API_KEY` definida:
+
+```bash
+python examples/quickstart.py
+```
+
 ## Protocolo de Manchester
 
 O sistema implementa o protocolo internacional de triagem com as seguintes categorias:
