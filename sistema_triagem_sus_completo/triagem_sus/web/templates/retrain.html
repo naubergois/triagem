@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Treinar Modelos{% endblock %}
+{% block content %}
+<h3 class="mb-4">Treinamento dos Modelos</h3>
+<div class="d-grid gap-3 col-6 mx-auto">
+    <a href="{{ url_for('train_diabetes') }}" class="btn btn-primary">Re-treinar Modelo de Diabetes</a>
+    <a href="{{ url_for('train_pneumonia') }}" class="btn btn-secondary">Re-treinar Modelo de Pneumonia</a>
+</div>
+{% endblock %}

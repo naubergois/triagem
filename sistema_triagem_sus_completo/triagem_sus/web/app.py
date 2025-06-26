@@ -11,11 +11,13 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import json
 import pickle
 import pandas as pd
+from sklearn.datasets import load_diabetes
 from datetime import datetime
 from typing import List, Dict
 from heapq import heappush, heappop
 
 from models.diabetes_risk import DiabetesRiskModel, age_range_to_value
+from models.pneumonia_detector import PneumoniaXRayModel
 from agents.diabetes_risk_agent import DiabetesRiskAgent
 
 from agents.intelligent_triage_agent import IntelligentTriageAgent
@@ -25,6 +27,7 @@ app.secret_key = 'triagem_sus_secret_key'
 
 # Inicializar agentes e modelo
 triage_agent = None
+pneumonia_model = PneumoniaXRayModel()
 diabetes_model = DiabetesRiskModel()
 diabetes_agent = None
 
@@ -32,8 +35,8 @@ diabetes_agent = None
 patient_queue: List[Dict] = []
 
 def load_triage_agent():
-    """Carrega os agentes e o modelo de diabetes"""
-    global triage_agent, diabetes_agent, diabetes_model
+    """Carrega agentes e modelos de ML"""
+    global triage_agent, diabetes_agent, diabetes_model, pneumonia_model
     try:
         triage_agent = IntelligentTriageAgent()
 
@@ -43,6 +46,10 @@ def load_triage_agent():
         else:
             diabetes_model.train()
             diabetes_model.save(model_path)
+
+        pneumo_path = os.path.join(os.path.dirname(__file__), '..', 'models', 'pneumonia_model.pt')
+        if os.path.exists(pneumo_path):
+            pneumonia_model.load(pneumo_path)
 
         diabetes_agent = DiabetesRiskAgent(diabetes_model)
         return True
@@ -199,6 +206,36 @@ def dashboard():
 
     except FileNotFoundError:
         return render_template('dashboard.html', stats={}, results=[])
+
+
+@app.route('/dados_diabetes')
+def dados_diabetes():
+    """Exibe uma amostra do dataset de diabetes"""
+    data = load_diabetes()
+    df = pd.DataFrame(data.data, columns=data.feature_names)
+    return render_template('dados_diabetes.html', columns=df.columns[:4], rows=df.head().iloc[:, :4].values)
+
+
+@app.route('/retrain')
+def retrain_models():
+    return render_template('retrain.html')
+
+
+@app.route('/train/diabetes')
+def train_diabetes():
+    acc = diabetes_model.train()
+    path = os.path.join(os.path.dirname(__file__), '..', 'models', 'diabetes_model.pkl')
+    diabetes_model.save(path)
+    return redirect(url_for('retrain_models'))
+
+
+@app.route('/train/pneumonia')
+def train_pneumonia():
+    data_dir = os.path.join(os.path.dirname(__file__), '..', 'data', 'chest_xray')
+    acc = pneumonia_model.train(data_dir)
+    path = os.path.join(os.path.dirname(__file__), '..', 'models', 'pneumonia_model.pt')
+    pneumonia_model.save(path)
+    return redirect(url_for('retrain_models'))
 
 
 @app.route('/fila')
