@@ -17,6 +17,8 @@ from langchain_core.language_models.base import BaseLanguageModel
 from langchain_core.callbacks import CallbackManagerForToolRun
 from langchain_community.llms import FakeListLLM
 
+from agents.patient_analysis_agent import PatientAnalysisAgent
+
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -258,6 +260,8 @@ class IntelligentTriageAgent:
         self.tools = self._create_tools()
         self.llm = self._create_llm()
         self.agent = self._create_agent()
+        # Agente de análise clínica via OpenAI
+        self.analysis_agent = PatientAnalysisAgent()
     
     def _create_llm(self):
         """Cria um LLM simulado para demonstração"""
@@ -322,7 +326,7 @@ class IntelligentTriageAgent:
         return create_react_agent(self.llm, self.tools, prompt)
     
     def perform_triage(self, patient_id: str) -> TriageResult:
-        """Realiza triagem completa de um paciente"""
+        """Realiza triagem completa de um paciente e gera avaliação via OpenAI"""
         
         # Executar agente
         agent_executor = AgentExecutor(
@@ -365,7 +369,12 @@ class IntelligentTriageAgent:
                 alerts=json.loads(alerts),
                 timestamp=datetime.now().isoformat()
             )
-            
+
+            # Avaliação clínica adicional pelo agente OpenAI
+            analysis = self.analysis_agent.evaluate(patient_dict)
+            print("\nAvaliação do especialista:")
+            print(analysis)
+
             return result
             
         except Exception as e:

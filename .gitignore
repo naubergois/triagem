@@ -1,0 +1,9 @@
+# Python cache files
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# Data and model artifacts (optional) - keep? but there is dataset etc maybe not
+# We'll not ignore data for now

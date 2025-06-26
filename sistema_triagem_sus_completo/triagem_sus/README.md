@@ -97,6 +97,8 @@ Execute o agente para triagem automática:
 ```bash
 python agents/intelligent_triage_agent.py
 ```
+Se houver um arquivo `.env` com `OPENAI_API_KEY`, o agente também exibirá uma
+avaliação clínica gerada via OpenAI juntamente com a classificação de risco.
 
 ### 2. Interface Web
 
@@ -130,8 +132,18 @@ curl -X POST http://localhost:5000/api/triagem \
       "respiratory_rate": 20,
       "oxygen_saturation": 96
     },
-    "chief_complaint": "Dor no peito há 2 horas"
-  }'
+  "chief_complaint": "Dor no peito há 2 horas"
+}'
+```
+
+### 4. Agente de Análise Médica
+
+Para obter uma avaliação resumida de um paciente com pontuação de gravidade
+utilizando a API da OpenAI, crie um arquivo `.env` com a variável
+`OPENAI_API_KEY` e execute:
+
+```bash
+python agents/patient_analysis_agent.py
 ```
 
 ## Protocolo de Manchester
