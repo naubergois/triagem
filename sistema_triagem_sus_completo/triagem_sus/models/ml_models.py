@@ -90,7 +90,12 @@ class TriageMLModels:
     def train_models(self, X, y):
         """Treina todos os modelos"""
         print("\nDividindo dados em treino e teste...")
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
+        X_train, X_test, y_train, y_test = train_test_split(
+            X, y, test_size=0.2, random_state=42, stratify=y
+        )
+        print(f"Amostras de treino: {X_train.shape[0]} / Amostras de teste: {X_test.shape[0]}")
+
+        print("Normalizando dados...")
         
         # Normalizar dados
         scaler = StandardScaler()
@@ -100,20 +105,33 @@ class TriageMLModels:
         
         # 1. Random Forest
         print("\nTreinando Random Forest...")
-        rf_model = RandomForestClassifier(n_estimators=100, random_state=42, max_depth=10)
+        rf_model = RandomForestClassifier(
+            n_estimators=100,
+            random_state=42,
+            max_depth=10,
+            verbose=1,
+        )
         rf_model.fit(X_train, y_train)
+        print("Random Forest treinado.")
         self.models['random_forest'] = rf_model
         
         # 2. Regressão Logística
         print("Treinando Regressão Logística...")
-        lr_model = LogisticRegression(random_state=42, max_iter=1000)
+        lr_model = LogisticRegression(random_state=42, max_iter=1000, verbose=1)
         lr_model.fit(X_train_scaled, y_train)
+        print("Regressão Logística treinada.")
         self.models['logistic_regression'] = lr_model
         
         # 3. Rede Neural (MLP)
         print("Treinando Rede Neural...")
-        mlp_model = MLPClassifier(hidden_layer_sizes=(100, 50), random_state=42, max_iter=500)
+        mlp_model = MLPClassifier(
+            hidden_layer_sizes=(100, 50),
+            random_state=42,
+            max_iter=500,
+            verbose=True,
+        )
         mlp_model.fit(X_train_scaled, y_train)
+        print("Rede Neural treinada.")
         self.models['neural_network'] = mlp_model
         
         # Avaliar modelos
@@ -128,22 +146,25 @@ class TriageMLModels:
         results = {}
         
         # Random Forest
+        print("\nAvaliando Random Forest...")
         rf_pred = self.models['random_forest'].predict(X_test)
         rf_accuracy = accuracy_score(y_test, rf_pred)
         results['random_forest'] = rf_accuracy
-        print(f"\nRandom Forest - Acurácia: {rf_accuracy:.4f}")
+        print(f"Acurácia: {rf_accuracy:.4f}")
         
         # Regressão Logística
+        print("\nAvaliando Regressão Logística...")
         lr_pred = self.models['logistic_regression'].predict(X_test_scaled)
         lr_accuracy = accuracy_score(y_test, lr_pred)
         results['logistic_regression'] = lr_accuracy
-        print(f"Regressão Logística - Acurácia: {lr_accuracy:.4f}")
+        print(f"Acurácia: {lr_accuracy:.4f}")
         
         # Rede Neural
+        print("\nAvaliando Rede Neural...")
         mlp_pred = self.models['neural_network'].predict(X_test_scaled)
         mlp_accuracy = accuracy_score(y_test, mlp_pred)
         results['neural_network'] = mlp_accuracy
-        print(f"Rede Neural - Acurácia: {mlp_accuracy:.4f}")
+        print(f"Acurácia: {mlp_accuracy:.4f}")
         
         # Melhor modelo
         best_model = max(results, key=results.get)
@@ -180,17 +201,22 @@ class TriageMLModels:
         
         # Salvar modelos
         for name, model in self.models.items():
-            with open(f'/home/ubuntu/triagem_sus/models/{name}_model.pkl', 'wb') as f:
+            path = f'/home/ubuntu/triagem_sus/models/{name}_model.pkl'
+            print(f'Salvando {name} em {path}...')
+            with open(path, 'wb') as f:
                 pickle.dump(model, f)
         
         # Salvar scalers e encoders
+        print('Salvando scalers...')
         with open('/home/ubuntu/triagem_sus/models/scalers.pkl', 'wb') as f:
             pickle.dump(self.scalers, f)
         
+        print('Salvando encoders...')
         with open('/home/ubuntu/triagem_sus/models/encoders.pkl', 'wb') as f:
             pickle.dump(self.encoders, f)
         
         # Salvar nomes das features
+        print('Salvando nomes das features...')
         with open('/home/ubuntu/triagem_sus/models/feature_names.json', 'w') as f:
             json.dump(self.feature_names, f)
         

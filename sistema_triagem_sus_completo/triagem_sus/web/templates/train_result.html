@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}Resultado do Treinamento{% endblock %}
+{% block content %}
+<h3 class="mb-4">Treinamento do Modelo {{ model }}</h3>
+<pre class="bg-light p-3" style="max-height: 400px; overflow-y: auto;">{{ logs|join('\n') }}</pre>
+<p><strong>Acurácia final:</strong> {{ "%.4f"|format(accuracy) }}</p>
+<a href="{{ url_for('retrain_models') }}" class="btn btn-primary mt-3">Voltar</a>
+{% endblock %}

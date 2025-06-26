@@ -19,22 +19,28 @@ class DiabetesRiskModel:
 
     def train(self) -> float:
         """Treina o modelo usando o dataset de exemplo do scikit-learn."""
+        print("Carregando dataset de diabetes...")
         data = load_diabetes()
         X = data.data[:, [0, 3]]  # age e blood pressure
         y = (data.target > np.median(data.target)).astype(int)
 
+        print("Dividindo dados em treino e teste...")
         X_train, X_test, y_train, y_test = train_test_split(
             X, y, test_size=0.2, random_state=42
         )
 
+        print("Normalizando dados...")
         self.scaler = StandardScaler()
         X_train_scaled = self.scaler.fit_transform(X_train)
         X_test_scaled = self.scaler.transform(X_test)
 
+        print("Treinando modelo de regressão logística...")
         self.model = LogisticRegression(max_iter=1000)
         self.model.fit(X_train_scaled, y_train)
 
+        print("Avaliando modelo...")
         acc = self.model.score(X_test_scaled, y_test)
+        print(f"Acurácia obtida: {acc:.4f}")
         return acc
 
     def save(self, path: str) -> None:

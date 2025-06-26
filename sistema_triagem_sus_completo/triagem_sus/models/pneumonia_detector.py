@@ -15,6 +15,7 @@ class PneumoniaXRayModel:
 
     def train(self, data_dir: str = "data/chest_xray") -> float:
         """Treina o modelo com o dataset Chest X-Ray Pneumonia."""
+        print("Preparando transformações de imagem...")
         transform = transforms.Compose([
             transforms.Resize((224, 224)),
             transforms.ToTensor(),
@@ -29,11 +30,13 @@ class PneumoniaXRayModel:
                 "subpastas 'train' e 'val' nesse diretório."
             )
 
+        print("Carregando datasets de treino e validação...")
         train_ds = datasets.ImageFolder(train_path, transform=transform)
         val_ds = datasets.ImageFolder(val_path, transform=transform)
         train_dl = DataLoader(train_ds, batch_size=16, shuffle=True)
         val_dl = DataLoader(val_ds, batch_size=16)
 
+        print("Inicializando modelo ResNet18...")
         base_model = models.resnet18(weights=models.ResNet18_Weights.DEFAULT)
         for p in base_model.parameters():
             p.requires_grad = False
@@ -44,8 +47,10 @@ class PneumoniaXRayModel:
         criterion = nn.CrossEntropyLoss()
         optimizer = optim.Adam(self.model.fc.parameters(), lr=1e-3)
 
+        print("Iniciando treinamento...")
         self.model.train()
         for epoch in range(1):
+            print(f"Época {epoch + 1}")
             for imgs, labels in train_dl:
                 imgs, labels = imgs.to(self.device), labels.to(self.device)
                 optimizer.zero_grad()
@@ -54,6 +59,7 @@ class PneumoniaXRayModel:
                 loss.backward()
                 optimizer.step()
 
+        print("Avaliando modelo...")
         self.model.eval()
         correct = 0
         total = 0
@@ -65,6 +71,7 @@ class PneumoniaXRayModel:
                 correct += (preds == labels).sum().item()
                 total += labels.size(0)
         acc = correct / total if total > 0 else 0
+        print(f"Acurácia de validação: {acc:.4f}")
         return acc
 
     def save(self, path: str) -> None:
