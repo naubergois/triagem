@@ -301,15 +301,15 @@ class IntelligentTriageAgent:
     
     def _create_agent(self):
         """Cria o agente ReAct"""
-        prompt = PromptTemplate.from_template("""
+        template = """
         Você é um agente inteligente especializado em triagem médica no SUS.
         Sua função é analisar dados de pacientes e classificar o risco conforme o protocolo de Manchester.
 
         Você tem acesso às seguintes ferramentas:
         {tools}
-        
+
         Use o seguinte formato:
-        
+
         Pergunta: a pergunta de entrada que você deve responder
         Pensamento: você deve sempre pensar sobre o que fazer
         Ação: a ação a tomar, deve ser uma das [{tool_names}]
@@ -321,10 +321,11 @@ class IntelligentTriageAgent:
 
         Pergunta: {input}
         Pensamento: {agent_scratchpad}
-        """)
+        """
         tools_str = "\n".join(f"{t.name}: {t.description}" for t in self.tools)
         tool_names = ", ".join(t.name for t in self.tools)
-        prompt = prompt.partial(tools=tools_str, tool_names=tool_names)
+        filled_template = template.format(tools=tools_str, tool_names=tool_names)
+        prompt = PromptTemplate.from_template(filled_template)
 
         return create_react_agent(self.llm, self.tools, prompt)
     
