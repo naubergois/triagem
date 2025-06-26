@@ -8,6 +8,9 @@ import sys
 import os
 from io import StringIO
 from contextlib import redirect_stdout
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Adicionar o diretório pai ao path para importar módulos antes dos imports locais
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -24,6 +27,7 @@ from models.pneumonia_detector import PneumoniaXRayModel
 from agents.diabetes_risk_agent import DiabetesRiskAgent
 
 from agents.intelligent_triage_agent import IntelligentTriageAgent
+from agents.patient_analysis_agent import PatientAnalysisAgent
 
 app = Flask(__name__)
 app.secret_key = 'triagem_sus_secret_key'
@@ -33,15 +37,17 @@ triage_agent = None
 pneumonia_model = PneumoniaXRayModel()
 diabetes_model = DiabetesRiskModel()
 diabetes_agent = None
+analysis_agent = None
 
 # Fila de prioridade (heap)
 patient_queue: List[Dict] = []
 
 def load_triage_agent():
     """Carrega agentes e modelos de ML"""
-    global triage_agent, diabetes_agent, diabetes_model, pneumonia_model
+    global triage_agent, diabetes_agent, diabetes_model, pneumonia_model, analysis_agent
     try:
         triage_agent = IntelligentTriageAgent()
+        analysis_agent = PatientAnalysisAgent()
 
         model_path = os.path.join(os.path.dirname(__file__), '..', 'models', 'diabetes_model.pkl')
         if os.path.exists(model_path):
@@ -94,6 +100,14 @@ def realizar_triagem():
         # Simular triagem (em um sistema real, usaria o agente)
         result = simulate_triage(patient_data)
 
+        # Avaliação clínica via PatientAnalysisAgent
+        analysis = None
+        if analysis_agent:
+            try:
+                analysis = analysis_agent.evaluate(patient_data)
+            except Exception as e:
+                analysis = f"Erro na análise: {str(e)}"
+
         # Calcular probabilidade de diabetes, se o modelo estiver disponível
         diabetes_score = None
         if diabetes_model.is_trained():
@@ -106,10 +120,11 @@ def realizar_triagem():
             'patient_id': patient_data['patient_id'],
             'triage_result': result,
             'diabetes_score': diabetes_score,
+            'analysis': analysis,
             'data': patient_data
         }))
 
-        return render_template('resultado.html', result=result, patient_data=patient_data)
+        return render_template('resultado.html', result=result, patient_data=patient_data, analysis=analysis)
         
     except Exception as e:
         return jsonify({'error': str(e)}), 500
