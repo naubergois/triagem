@@ -6,6 +6,8 @@ Interface web usando Flask para demonstração do sistema
 from flask import Flask, render_template, request, jsonify, redirect, url_for
 import sys
 import os
+# Adicionar o diretório pai ao path para importar módulos antes dos imports locais
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import json
 import pickle
 import pandas as pd
@@ -15,9 +17,6 @@ from heapq import heappush, heappop
 
 from models.diabetes_risk import DiabetesRiskModel, age_range_to_value
 from agents.diabetes_risk_agent import DiabetesRiskAgent
-
-# Adicionar o diretório pai ao path para importar módulos
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from agents.intelligent_triage_agent import IntelligentTriageAgent
 
