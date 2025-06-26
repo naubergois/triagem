@@ -22,6 +22,13 @@ class PneumoniaXRayModel:
         ])
         train_path = os.path.join(data_dir, "train")
         val_path = os.path.join(data_dir, "val")
+        if not os.path.isdir(train_path) or not os.path.isdir(val_path):
+            raise FileNotFoundError(
+                f"Pasta do dataset não encontrada em '{data_dir}'. "
+                "Baixe o conjunto 'Chest X-Ray Pneumonia' e coloque as "
+                "subpastas 'train' e 'val' nesse diretório."
+            )
+
         train_ds = datasets.ImageFolder(train_path, transform=transform)
         val_ds = datasets.ImageFolder(val_path, transform=transform)
         train_dl = DataLoader(train_ds, batch_size=16, shuffle=True)
