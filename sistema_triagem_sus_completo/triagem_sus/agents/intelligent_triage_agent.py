@@ -324,8 +324,8 @@ class IntelligentTriageAgent:
         """
         tools_str = "\n".join(f"{t.name}: {t.description}" for t in self.tools)
         tool_names = ", ".join(t.name for t in self.tools)
-        filled_template = template.format(tools=tools_str, tool_names=tool_names)
-        prompt = PromptTemplate.from_template(filled_template)
+        prompt = PromptTemplate.from_template(template)
+        prompt = prompt.partial(tools=tools_str, tool_names=tool_names)
 
         return create_react_agent(self.llm, self.tools, prompt)
     
