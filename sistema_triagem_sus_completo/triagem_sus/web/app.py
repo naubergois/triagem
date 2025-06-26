@@ -232,7 +232,11 @@ def train_diabetes():
 @app.route('/train/pneumonia')
 def train_pneumonia():
     data_dir = os.path.join(os.path.dirname(__file__), '..', 'data', 'chest_xray')
-    acc = pneumonia_model.train(data_dir)
+    try:
+        acc = pneumonia_model.train(data_dir)
+    except FileNotFoundError as e:
+        return jsonify({'error': str(e)}), 500
+
     path = os.path.join(os.path.dirname(__file__), '..', 'models', 'pneumonia_model.pt')
     pneumonia_model.save(path)
     return redirect(url_for('retrain_models'))

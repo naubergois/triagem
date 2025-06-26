@@ -76,6 +76,18 @@ python data/generate_synthetic_data.py
 python models/ml_models.py
 ```
 
+5. (Opcional) Para treinar o detector de pneumonia, baixe o dataset
+   ["Chest X-Ray Images (Pneumonia)"](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia)
+   do Kaggle e extraia as pastas `train`, `val` e `test` em `data/chest_xray/`.
+   A estrutura final deve ficar assim:
+
+   ```
+   data/chest_xray/
+   ├── train/
+   ├── val/
+   └── test/
+   ```
+
 ## Uso
 
 ### 1. Agente Inteligente de Triagem
