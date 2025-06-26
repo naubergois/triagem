@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Fila de Atendimento - Sistema de Triagem SUS{% endblock %}
+
+{% block content %}
+<h3 class="mb-4">Fila de Prioridade</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID Paciente</th>
+            <th>Risco</th>
+            <th>Prioridade</th>
+            <th>Score Diabetes</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in fila %}
+        <tr class="risk-{{ item.triage_result.risk_category.lower() }}">
+            <td>{{ item.patient_id }}</td>
+            <td>{{ item.triage_result.risk_category }}</td>
+            <td>{{ item.triage_result.priority }}</td>
+            <td>{{ "%.2f"|format(item.diabetes_score) }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
