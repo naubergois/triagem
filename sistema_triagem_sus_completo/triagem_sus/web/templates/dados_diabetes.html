@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Dados do Modelo de Diabetes{% endblock %}
+{% block content %}
+<h3 class="mb-3">Amostra do Dataset de Diabetes</h3>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+        {% for col in columns %}
+            <th>{{ col }}</th>
+        {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in rows %}
+        <tr>
+            {% for val in row %}
+            <td>{{ val }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
