@@ -1,0 +1,834 @@
+[
+  {
+    "patient": "Ana Costa 055",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "4",
+    "analysis": "Avaliação: Paciente apresenta sintomas de dor de cabeça, náuseas e visão turva, além de possuir enxaqueca crônica como comorbidade. Os sinais vitais estão dentro dos parâmetros normais.\nPontuação: 4",
+    "_source_file": "Ana_Costa_055.json"
+  },
+  {
+    "patient": "Ana Gomes 100",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "7",
+    "analysis": "Avaliação: Paciente apresenta sintomas de febre alta, tosse seca e dor no corpo, além de possuir comorbidades de diabetes tipo 2 e hipertensão. Os sinais vitais mostram uma febre de 38.5°C, batimentos cardíacos elevados, pressão arterial ligeiramente elevada e baixa saturação de oxigênio. Recomenda-se uma avaliação médica mais aprofundada e possível internação para tratamento.\nPontuação: 7.",
+    "_source_file": "Ana_Gomes_100.json"
+  },
+  {
+    "patient": "Ana Martins 029",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: Paciente apresenta sintomas de falta de ar, dor no peito e suor excessivo, além de comorbidades de infarto prévio e hipertensão. Os sinais vitais indicam uma temperatura elevada, frequência cardíaca aumentada, pressão arterial sistólica e diastólica elevadas, taxa respiratória normal e baixa saturação de oxigênio.\nPontuação: 8",
+    "_source_file": "Ana_Martins_029.json"
+  },
+  {
+    "patient": "Ana Martins 089",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "4",
+    "analysis": "Avaliação: Paciente com dor de cabeça, náuseas, visão turva e histórico de enxaqueca crônica. Sinais vitais dentro da normalidade.\nPontuação: 4",
+    "_source_file": "Ana_Martins_089.json"
+  },
+  {
+    "patient": "Ana Oliveira 093",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: Paciente apresenta sintomas de febre alta, tosse seca, dor no corpo, além de comorbidades de Diabetes tipo 2 e hipertensão. Os sinais vitais indicam febre, taquicardia, pressão arterial elevada, saturação de oxigênio baixa. Há indicação de uma infecção respiratória aguda, possivelmente de origem viral, que requer atenção médica urgente.\n\nPontuação: 8.",
+    "_source_file": "Ana_Oliveira_093.json"
+  },
+  {
+    "patient": "Ana Rodrigues 004",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: O paciente Ana Rodrigues 004 apresenta sintomas de falta de ar, dor no peito e suor excessivo, além de possuir comorbidades de infarto prévio e hipertensão. Os sinais vitais mostram uma temperatura corporal dentro da faixa normal, mas a frequência cardíaca elevada, pressão arterial elevada, saturação de oxigênio baixa e respiração dentro da faixa normal. Considerando o quadro clínico apresentado, é indicado encaminhamento urgente para avaliação médica especializada.\nPontuação: 8",
+    "_source_file": "Ana_Rodrigues_004.json"
+  },
+  {
+    "patient": "Ana Silva 073",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "4",
+    "analysis": "Avaliação: Paciente apresenta dor de cabeça, náuseas, visão turva e possui histórico de enxaqueca crônica. Sinais vitais dentro da normalidade.\nPontuação: 4",
+    "_source_file": "Ana_Silva_073.json"
+  },
+  {
+    "patient": "Ana Souza 081",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: A paciente Ana Souza 081 apresenta sintomas de falta de ar, dor no peito e suor excessivo, além de ter antecedentes de infarto prévio e hipertensão. Seus sinais vitais mostram temperatura elevada, frequência cardíaca aumentada, pressão arterial elevada, respiração dentro dos limites normais, porém com baixa saturação de oxigênio. Esses dados sugerem um quadro de emergência cardiovascular aguda, possivelmente associado a uma piora na função pulmonar.\nPontuação: 8",
+    "_source_file": "Ana_Souza_081.json"
+  },
+  {
+    "patient": "Carlos Costa 030",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "9",
+    "analysis": "Avaliação: O paciente Carlos Costa 030 apresenta sintomas preocupantes de falta de ar, dor no peito e suor excessivo, juntamente com comorbidades de infarto prévio e hipertensão. Os sinais vitais também mostram uma temperatura elevada, frequência cardíaca e pressão arterial elevadas, juntamente com uma saturação de oxigênio baixa.\nPontuação: 9",
+    "_source_file": "Carlos_Costa_030.json"
+  },
+  {
+    "patient": "Carlos Costa 051",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "4",
+    "analysis": "Avaliação: Paciente com dor de cabeça, náuseas, visão turva e histórico de enxaqueca crônica. Os sinais vitais estão dentro dos parâmetros normais. Sugere-se investigação mais detalhada da dor de cabeça e possíveis interações com a enxaqueca crônica.\nPontuação: 4",
+    "_source_file": "Carlos_Costa_051.json"
+  },
+  {
+    "patient": "Carlos Costa 056",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "9",
+    "analysis": "Avaliação: O paciente Carlos Costa 056 apresenta falta de ar, dor no peito, sudorese excessiva, histórico de infarto anterior e hipertensão. Além disso, mostra sinais de febre, taquicardia, pressão arterial elevada, saturação de oxigênio baixa e respiração normal. Diante desses sintomas e histórico médico, é importante considerar um quadro de grave comprometimento cardiovascular e respiratório.\nPontuação: 9",
+    "_source_file": "Carlos_Costa_056.json"
+  },
+  {
+    "patient": "Carlos Gomes 022",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "6",
+    "analysis": "Avaliação: O paciente apresenta sintomas de febre alta, tosse seca e dor no corpo, além de possuir comorbidades de diabetes tipo 2 e hipertensão. Os sinais vitais mostram uma temperatura elevada, frequência cardíaca e pressão arterial dentro dos limites normais, porém um nível de saturação de oxigênio abaixo do ideal. Considerando o quadro clínico geral, é recomendado uma avaliação mais detalhada para investigar a causa da febre e a baixa saturação de oxigênio.\nPontuação: 6",
+    "_source_file": "Carlos_Gomes_022.json"
+  },
+  {
+    "patient": "Carlos Martins 057",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: O paciente Carlos Martins 057 apresenta sintomas de falta de ar, dor no peito e suor excessivo, juntamente com comorbidades de infarto prévio e hipertensão. Seus sinais vitais revelam uma temperatura normal, frequência cardíaca elevada, pressão sanguínea elevada, frequência respiratória normal, mas uma saturação de oxigênio baixa.\n\nPontuação: 8",
+    "_source_file": "Carlos_Martins_057.json"
+  },
+  {
+    "patient": "Carlos Martins 068",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "4",
+    "analysis": "Avaliação: O paciente apresenta sintomas de dor de cabeça, náuseas e visão turva, além de ter histórico de enxaqueca crônica. Os sinais vitais estão dentro da faixa de normalidade.\nPontuação: 4",
+    "_source_file": "Carlos_Martins_068.json"
+  },
+  {
+    "patient": "Carlos Oliveira 087",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: O paciente apresenta sintomas de falta de ar, dor no peito e suor excessivo, além de comorbidades de infarto prévio e hipertensão. Os sinais vitais mostram uma temperatura dentro da normalidade, porém uma frequência cardíaca elevada, pressão arterial alta, respiração normal e uma saturação de oxigênio baixa. Considerando o conjunto de sintomas e comorbidades, sugere-se uma avaliação urgente para descartar complicações cardíacas.\nPontuação: 8.",
+    "_source_file": "Carlos_Oliveira_087.json"
+  },
+  {
+    "patient": "Carlos Rodrigues 001",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: O paciente Carlos Rodrigues 001 apresenta sintomas preocupantes de falta de ar, dor no peito e suor excessivo, além de comorbidades de infarto prévio e hipertensão. Seus sinais vitais indicam uma temperatura normal, frequência cardíaca elevada, pressão sanguínea elevada, frequência respiratória normal e uma baixa saturação de oxigênio. Esses dados sugerem a possibilidade de uma condição cardíaca grave e a necessidade de avaliação e tratamento imediatos.\n\nPontuação: 8.",
+    "_source_file": "Carlos_Rodrigues_001.json"
+  },
+  {
+    "patient": "Carlos Souza",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "9",
+    "analysis": "Avaliação: O paciente Carlos Souza apresenta sintomas graves, incluindo falta de ar, dor no peito e suor excessivo, além de possuir comorbidades como infarto prévio e hipertensão. Seus sinais vitais indicam febre, taquicardia, pressão arterial elevada, frequência respiratória dentro da normalidade, porém com baixa saturação de oxigênio. Considerando a gravidade dos sintomas e dos sinais vitais, recomenda-se uma avaliação médica urgente.\n\nPontuação: 9",
+    "_source_file": "Carlos_Souza.json"
+  },
+  {
+    "patient": "Carlos Souza 058",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: O paciente apresenta sintomas de febre alta, tosse seca e dor no corpo, além de comorbidades de Diabetes tipo 2 e hipertensão. Suas condições vitais mostram uma temperatura elevada de 38.5ºC e uma saturação de oxigênio de 92%. Recomenda-se uma avaliação médica imediata para investigação de possível infecção respiratória aguda, devido aos sintomas e à baixa saturação de oxigênio.\nPontuação: 8",
+    "_source_file": "Carlos_Souza_058.json"
+  },
+  {
+    "patient": "Fernanda Almeida 052",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "7",
+    "analysis": "Avaliação: Paciente apresenta sintomas de febre alta, tosse seca, dor no corpo, além de comorbidades de Diabetes tipo 2 e hipertensão. Os sinais vitais indicam temperatura elevada, batimentos cardíacos levemente aumentados, pressão arterial e oxigenação dentro dos parâmetros normais, porém com a saturação de oxigênio levemente baixa.\nPontuação: 7",
+    "_source_file": "Fernanda_Almeida_052.json"
+  },
+  {
+    "patient": "Fernanda Costa 062",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: Paciente apresenta sintomas de febre alta, tosse seca e dor no corpo, associados a comorbidades de diabetes tipo 2 e hipertensão. Os sinais vitais mostram febre elevada, frequência cardíaca aumentada e oxigenação ligeiramente reduzida.\nPontuação: 8",
+    "_source_file": "Fernanda_Costa_062.json"
+  },
+  {
+    "patient": "Fernanda Gomes 064",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "4",
+    "analysis": "Avaliação: Paciente apresenta dor de cabeça, náuseas, visão turva e comorbidade de enxaqueca crônica. Sinais vitais dentro da faixa de normalidade.\nPontuação: 4",
+    "_source_file": "Fernanda_Gomes_064.json"
+  },
+  {
+    "patient": "Fernanda Gomes 097",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "9",
+    "analysis": "Avaliação: Paciente apresenta febre alta, tosse seca, dor no corpo, diabetes tipo 2, hipertensão e saturação de oxigênio baixa.\nPontuação: 9",
+    "_source_file": "Fernanda_Gomes_097.json"
+  },
+  {
+    "patient": "Fernanda Martins 080",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "3",
+    "analysis": "Avaliação: A paciente Fernanda Martins 080 apresenta sintomas de dor de cabeça, náuseas e visão turva, juntamente com comorbidade de enxaqueca crônica. Seus sinais vitais estão dentro dos parâmetros normais, com temperatura de 36.9°C, frequência cardíaca de 78 bpm, pressão arterial sistólica de 110 mmHg, pressão arterial diastólica de 70 mmHg, frequência respiratória de 16 irpm e saturação de oxigênio de 98%. Sugere-se avaliação mais aprofundada para manejo da enxaqueca e dos sintomas atuais.\n\nPontuação: 3",
+    "_source_file": "Fernanda_Martins_080.json"
+  },
+  {
+    "patient": "Fernanda Silva 028",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "9",
+    "analysis": "Avaliação: Paciente apresenta falta de ar, dor no peito, suor excessivo, infarto prévio e hipertensão, além de sinais vitais indicativos de preocupação, como temperatura elevada, frequência cardíaca acelerada, pressão arterial elevada, saturação de oxigênio baixa. Indicativo de quadro agudo cardiorrespiratório grave. Recomenda-se avaliação médica urgente.\n\nPontuação: 9",
+    "_source_file": "Fernanda_Silva_028.json"
+  },
+  {
+    "patient": "Fernanda Souza 036",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "4",
+    "analysis": "Avaliação: Paciente apresenta sintomas de dor de cabeça, náuseas e visão turva, juntamente com a comorbidade de enxaqueca crônica. Os sinais vitais estão dentro dos parâmetros normais.\nPontuação: 4",
+    "_source_file": "Fernanda_Souza_036.json"
+  },
+  {
+    "patient": "João Almeida 059",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "7",
+    "analysis": "Avaliação: O paciente João Almeida 059 apresenta sintomas de falta de ar, dor no peito e suor excessivo, além de comorbidades como infarto prévio e hipertensão. Seus sinais vitais estão dentro da faixa de normalidade, exceto pela saturação de oxigênio baixa de 88%, o que pode indicar um problema respiratório agudo. Recomenda-se uma avaliação médica urgente para investigação mais aprofundada.\n\nPontuação: 7",
+    "_source_file": "Jo_o_Almeida_059.json"
+  },
+  {
+    "patient": "João Almeida 072",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "4",
+    "analysis": "Avaliação: Paciente apresenta dor de cabeça, náuseas e visão turva, além de ter histórico de enxaqueca crônica. Os sinais vitais estão dentro da normalidade. Recomenda-se avaliação mais detalhada para determinar a causa dos sintomas.\nPontuação: 4",
+    "_source_file": "Jo_o_Almeida_072.json"
+  },
+  {
+    "patient": "João Almeida 085",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: O paciente apresenta sintomas de febre alta, tosse seca e dor no corpo, além de ter como comorbidades diabetes tipo 2 e hipertensão. Os sinais vitais mostram uma temperatura elevada, frequência cardíaca e pressão arterial levemente elevadas, respiração normal e saturação de oxigênio abaixo do esperado.\nPontuação: 8",
+    "_source_file": "Jo_o_Almeida_085.json"
+  },
+  {
+    "patient": "João Costa 011",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: O paciente João Costa 011 apresenta sintomas de falta de ar, dor no peito e suor excessivo, juntamente com comorbidades de infarto prévio e hipertensão. Seus sinais vitais mostram uma temperatura dentro da faixa normal, mas uma frequência cardíaca elevada, pressão arterial elevada, taxa de respiração normal e baixa saturação de oxigênio. Esses sintomas e sinais sugerem uma condição cardíaca aguda, possivelmente um infarto do miocárdio ou insuficiência cardíaca. O paciente precisa de avaliação e tratamento imediatos.\n\nPontuação: 8",
+    "_source_file": "Jo_o_Costa_011.json"
+  },
+  {
+    "patient": "João Costa 037",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: O paciente João Costa 037 apresenta falta de ar, dor no peito, suor excessivo, um infarto prévio e hipertensão. Seus sinais vitais mostram uma temperatura normal, frequência cardíaca elevada, pressão arterial alta, frequência respiratória normal e baixa saturação de oxigênio. Esses sintomas e comorbidades sugerem um quadro de emergência cardiovascular aguda.\nPontuação: 8.",
+    "_source_file": "Jo_o_Costa_037.json"
+  },
+  {
+    "patient": "João Gomes 040",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "9",
+    "analysis": "Avaliação: O paciente apresenta sintomas de falta de ar, dor no peito e suor excessivo, juntamente com comorbidades de infarto prévio e hipertensão. Os sinais vitais mostram uma temperatura normal, frequência cardíaca elevada, pressão arterial sistólica elevada, pressão arterial diastólica elevada, frequência respiratória normal e saturação de oxigênio baixa. Esta combinação de sintomas e comorbidades indica uma situação de gravidade alta que requer atenção imediata.\n\nPontuação: 9.",
+    "_source_file": "Jo_o_Gomes_040.json"
+  },
+  {
+    "patient": "João Martins 045",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "7",
+    "analysis": "Avaliação: O paciente João Martins 045 apresenta sintomas de febre alta, tosse seca e dor no corpo, além de comorbidades de diabetes tipo 2 e hipertensão. Seus sinais vitais mostram uma temperatura elevada de 38.5°C, frequência cardíaca aumentada de 95 bpm, pressão arterial sistólica e diastólica dentro dos limites normais, frequência respiratória adequada e uma saturação de oxigênio levemente baixa em 92%.\nPontuação: 7",
+    "_source_file": "Jo_o_Martins_045.json"
+  },
+  {
+    "patient": "João Martins 077",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "4",
+    "analysis": "Avaliação: Paciente apresenta sintomas de dor de cabeça, náuseas e visão turva, com comorbidade de enxaqueca crônica. Os sinais vitais encontram-se dentro da faixa normal. Recomenda-se avaliação mais aprofundada para investigar a causa dos sintomas.\nPontuação: 4",
+    "_source_file": "Jo_o_Martins_077.json"
+  },
+  {
+    "patient": "João Silva 024",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "3",
+    "analysis": "Avaliação: O paciente apresenta sintomas de dor de cabeça, náuseas e visão turva, juntamente com a comorbidade de enxaqueca crônica. Seus sinais vitais estão dentro dos parâmetros normais, indicando estabilidade. Recomenda-se investigação mais aprofundada da enxaqueca crônica e dos sintomas atuais.\nPontuação: 3",
+    "_source_file": "Jo_o_Silva_024.json"
+  },
+  {
+    "patient": "João Silva 099",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "7",
+    "analysis": "Avaliação: Paciente apresenta febre alta, tosse seca, dor no corpo, com histórico de diabetes tipo 2 e hipertensão. Sinais vitais mostram temperatura elevada, frequência cardíaca e pressão arterial dentro dos limites normais, porém saturação de oxigênio abaixo do ideal.\nPontuação: 7",
+    "_source_file": "Jo_o_Silva_099.json"
+  },
+  {
+    "patient": "João Souza 049",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "3",
+    "analysis": "Avaliação: O paciente apresenta sintomas de dor de cabeça, náuseas e visão turva, juntamente com a comorbidade de enxaqueca crônica. No entanto, seus sinais vitais estão dentro da faixa normal. Recomenda-se avaliação mais detalhada para determinar a causa dos sintomas.\nPontuação: 3",
+    "_source_file": "Jo_o_Souza_049.json"
+  },
+  {
+    "patient": "João Souza 078",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: Paciente apresenta falta de ar, dor no peito e suor excessivo, além de comorbidades como infarto prévio e hipertensão. Os sinais vitais mostram temperatura elevada, frequência cardíaca acima do normal, pressão arterial alta, saturação de oxigênio baixa e respiração dentro da normalidade. Suspeita-se de comprometimento cardíaco agudo, possivelmente um infarto do miocárdio.\nPontuação: 8",
+    "_source_file": "Jo_o_Souza_078.json"
+  },
+  {
+    "patient": "Joao da Silva",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: O paciente Joao da Silva apresenta sintomas de febre alta, tosse seca e dor no corpo, além de ter comorbidades de Diabetes tipo 2 e hipertensão. Suas medidas vitais estão com temperatura elevada (38.5°C), frequência cardíaca e pressão arterial dentro dos limites normais, porém com saturação de oxigênio baixa (92%). Considerando o quadro clínico apresentado e a baixa saturação de oxigênio, sugere-se uma avaliação mais aprofundada e possível internação hospitalar para avaliação e tratamento. \nPontuação: 8",
+    "_source_file": "Joao_da_Silva.json"
+  },
+  {
+    "patient": "Juliana Almeida 034",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "3",
+    "analysis": "Avaliação: A paciente Juliana Almeida 034 apresenta sintomas de dor de cabeça, náuseas e visão turva, além de comorbidade de enxaqueca crônica. Seus sinais vitais estão dentro dos parâmetros normais, com temperatura de 36.9°C, frequência cardíaca de 78 bpm, pressão arterial sistólica de 110 mmHg, pressão arterial diastólica de 70 mmHg, frequência respiratória de 16 irpm e saturação de oxigênio de 98%. Recomenda-se investigação mais detalhada dos sintomas para chegarmos a um diagnóstico correto.\n\nPontuação: 3",
+    "_source_file": "Juliana_Almeida_034.json"
+  },
+  {
+    "patient": "Juliana Martins 021",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: Paciente apresenta febre alta, tosse seca, dor no corpo, diabetes tipo 2 e hipertensão, além de uma temperatura elevada, frequência cardíaca e pressão arterial dentro dos limites superiores. A saturação de oxigênio está um pouco baixa.\nPontuação: 8.",
+    "_source_file": "Juliana_Martins_021.json"
+  },
+  {
+    "patient": "Juliana Oliveira 044",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "7",
+    "analysis": "Avaliação: Paciente apresenta febre alta, tosse seca e dor no corpo, juntamente com diabetes tipo 2 e hipertensão como comorbidades. A temperatura está elevada, a frequência cardíaca e pressão arterial estão dentro dos limites, a frequência respiratória está normal, porém a saturação de oxigênio está um pouco baixa.\n\nPontuação: 7",
+    "_source_file": "Juliana_Oliveira_044.json"
+  },
+  {
+    "patient": "Juliana Rodrigues 042",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: O paciente apresenta falta de ar, dor no peito, suor excessivo, com histórico de infarto prévio e hipertensão. Os sinais vitais mostram uma temperatura normal, taquicardia, pressão arterial elevada, taxa de oxigênio baixa e respiração dentro da normalidade. Há indícios de comprometimento cardiorrespiratório, sendo necessária uma avaliação mais detalhada e monitoramento constante.\n\nPontuação: 8",
+    "_source_file": "Juliana_Rodrigues_042.json"
+  },
+  {
+    "patient": "Juliana Rodrigues 071",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: A paciente Juliana Rodrigues 071 apresenta sintomas de falta de ar, dor no peito e suor excessivo, além de comorbidades de infarto previo e hipertensão. Seus sinais vitais estão dentro dos parâmetros normais, com exceção da saturação de oxigênio que está baixa em 88%. Considerando a gravidade dos sintomas e comorbidades, a paciente deve ser avaliada com urgência para investigação e tratamento adequado.\nPontuação: 8",
+    "_source_file": "Juliana_Rodrigues_071.json"
+  },
+  {
+    "patient": "Juliana Souza 013",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "7",
+    "analysis": "Avaliação: Paciente apresenta sintomas de febre alta, tosse seca e dor no corpo, com comorbidades de diabetes tipo 2 e hipertensão. Sinais vitais mostram temperatura elevada (38.5°C), frequência cardíaca normal (95 bpm), pressão arterial elevada (140/90 mmHg), frequência respiratória normal (16 irpm) e saturação de oxigênio ligeiramente baixa (92%).\nPontuação: 7",
+    "_source_file": "Juliana_Souza_013.json"
+  },
+  {
+    "patient": "Juliana Souza 023",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "4",
+    "analysis": "Avaliação: Paciente apresenta sintomas de dor de cabeça, náuseas e visão turva, além de possuir comorbidade de enxaqueca crônica. Os sinais vitais estão dentro da faixa considerada normal.\nPontuação: 4",
+    "_source_file": "Juliana_Souza_023.json"
+  },
+  {
+    "patient": "Lucas Almeida 017",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "3",
+    "analysis": "Avaliação: O paciente apresenta sintomas de dor de cabeça, náuseas e visão turva, além de ter como comorbidade enxaqueca crônica. Seus sinais vitais estão dentro da normalidade, com temperatura, frequência cardíaca, pressão arterial, frequência respiratória e saturação de oxigênio dentro dos valores de referência.\nPontuação: 3",
+    "_source_file": "Lucas_Almeida_017.json"
+  },
+  {
+    "patient": "Lucas Almeida 065",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "3",
+    "analysis": "Avaliação: Paciente com sintomas de dor de cabeça, náuseas e visão turva, além de possuir enxaqueca crônica. Os sinais vitais estão dentro dos parâmetros normais. Recomenda-se avaliação detalhada para investigação da dor de cabeça e náuseas, considerando a enxaqueca crônica como possível causa.\nPontuação: 3",
+    "_source_file": "Lucas_Almeida_065.json"
+  },
+  {
+    "patient": "Lucas Gomes 025",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "6.5",
+    "analysis": "Avaliação: O paciente apresenta sintomas de febre alta, tosse seca e dor no corpo, juntamente com comorbidades de diabetes tipo 2 e hipertensão. Os sinais vitais mostram uma temperatura elevada (38.5°C), frequência cardíaca e pressão arterial dentro dos parâmetros normais, mas a saturação de oxigênio está um pouco baixa (92%). Considerando os sintomas, comorbidades e os valores vitais, é importante investigar o quadro clínico do paciente com mais detalhes para determinar a gravidade do caso.\n\nPontuação: 6.5",
+    "_source_file": "Lucas_Gomes_025.json"
+  },
+  {
+    "patient": "Lucas Martins 088",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: O paciente apresenta febre alta, tosse seca e dor no corpo, além de ter como comorbidades diabetes tipo 2 e hipertensão. Os sinais vitais mostram uma temperatura elevada, taxa de respiração normal, frequência cardíaca um pouco acima do esperado e saturação de oxigênio abaixo do ideal. Considerando o quadro clínico e as comorbidades, é importante avaliar a possibilidade de uma infecção mais grave ou descompensação das doenças pré-existentes.\n\nPontuação: 8",
+    "_source_file": "Lucas_Martins_088.json"
+  },
+  {
+    "patient": "Lucas Oliveira 007",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: O paciente Lucas Oliveira 007 apresenta sintomas de falta de ar, dor no peito e suor excessivo, além de comorbidades de infarto prévio e hipertensão. Suas sinais vitais indicam temperatura dentro da normalidade, frequência cardíaca elevada, pressão arterial elevada, respiração normal e baixa saturação de oxigênio.\nPontuação: 8",
+    "_source_file": "Lucas_Oliveira_007.json"
+  },
+  {
+    "patient": "Lucas Oliveira 074",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "3",
+    "analysis": "Avaliação: O paciente apresenta dor de cabeça, náuseas e visão turva, além de possuir enxaqueca crônica. No entanto, seus sinais vitais estão dentro dos parâmetros normais, com temperatura, frequência cardíaca, pressão arterial, frequência respiratória e saturação de oxigênio adequados.\nPontuação: 3",
+    "_source_file": "Lucas_Oliveira_074.json"
+  },
+  {
+    "patient": "Lucas Pereira 041",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: O paciente Lucas Pereira 041 apresenta sintomas de febre alta, tosse seca e dor no corpo, além de comorbidades de Diabetes tipo 2 e hipertensão. Os sinais vitais também mostram uma temperatura elevada (38.5°C), batimentos cardíacos levemente acelerados (95 bpm) e saturação de oxigênio abaixo do ideal (92%). Esses dados sugerem uma possível infecção aguda, que requer avaliação e tratamento urgente.\n\nPontuação: 8",
+    "_source_file": "Lucas_Pereira_041.json"
+  },
+  {
+    "patient": "Lucas Rodrigues 019",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "3",
+    "analysis": "Avaliação: O paciente apresenta sintomas de dor de cabeça, náuseas e visão turva, além de ter histórico de enxaqueca crônica. No entanto, os sinais vitais estão dentro da normalidade, com temperatura, frequência cardíaca, pressão arterial, frequência respiratória e saturação de oxigênio dentro dos valores esperados.\nPontuação: 3",
+    "_source_file": "Lucas_Rodrigues_019.json"
+  },
+  {
+    "patient": "Lucas Rodrigues 031",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "3",
+    "analysis": "Avaliação: O paciente apresenta sintomas de dor de cabeça, náuseas e visão turva, juntamente com a comorbidade de enxaqueca crônica. Seus sinais vitais estão dentro dos parâmetros normais, com temperatura, frequência cardíaca, pressão arterial, respiração e saturação de oxigênio adequados.\nPontuação: 3",
+    "_source_file": "Lucas_Rodrigues_031.json"
+  },
+  {
+    "patient": "Lucas Silva 015",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "3",
+    "analysis": "Avaliação: Paciente apresenta sintomas de dor de cabeça, náuseas e visão turva, além de comorbidade de enxaqueca crônica. Sinais vitais dentro da normalidade, com temperatura, frequência cardíaca, pressão arterial, frequência respiratória e saturação de oxigênio dentro dos parâmetros normais.\nPontuação: 3.",
+    "_source_file": "Lucas_Silva_015.json"
+  },
+  {
+    "patient": "Lucas Souza 061",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "4",
+    "analysis": "Avaliação: O paciente Lucas Souza 061 apresenta dor de cabeça, náuseas, visão turva e possui comorbidade de enxaqueca crônica. Seus sinais vitais estão dentro dos parâmetros normais, com temperatura de 36.9, frequência cardíaca de 78 bpm, pressão arterial sistólica de 110, pressão arterial diastólica de 70, taxa respiratória de 16 e saturação de oxigênio de 98%. Recomenda-se avaliação médica para investigação e tratamento da enxaqueca crônica e dos sintomas apresentados.\nPontuação: 4",
+    "_source_file": "Lucas_Souza_061.json"
+  },
+  {
+    "patient": "Maria Almeida 008",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "5",
+    "analysis": "Avaliação: Paciente apresenta dor de cabeça, náuseas, visão turva e histórico de enxaqueca crônica. Os sinais vitais estão dentro dos parâmetros normais.\nPontuação: 5",
+    "_source_file": "Maria_Almeida_008.json"
+  },
+  {
+    "patient": "Maria Costa 035",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: Paciente com sintomas de falta de ar, dor no peito e suor excessivo, com histórico de infarto prévio e hipertensão. Apresenta temperatura normal, taquicardia, pressão arterial elevada, respiração moderadamente elevada e baixa saturação de oxigênio.\nPontuação: 8",
+    "_source_file": "Maria_Costa_035.json"
+  },
+  {
+    "patient": "Maria Martins 032",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: A paciente Maria Martins 032 apresenta sintomas de falta de ar, dor no peito e suor excessivo, com comorbidades de infarto prévio e hipertensão. Seus sinais vitais indicam febre, taquicardia, pressão arterial elevada, saturação de oxigênio baixa. Há preocupações com possíveis complicações cardiorrespiratórias.\nPontuação: 8",
+    "_source_file": "Maria_Martins_032.json"
+  },
+  {
+    "patient": "Maria Oliveira",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "5",
+    "analysis": "Avaliação: Paciente com dor de cabeça, náuseas, visão turva e histórico de enxaqueca crônica. Sinais vitais dentro da normalidade.\nPontuação: 5",
+    "_source_file": "Maria_Oliveira.json"
+  },
+  {
+    "patient": "Maria Oliveira 033",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "3",
+    "analysis": "Avaliação: Paciente apresenta dor de cabeça, náuseas, visão turva e possui histórico de enxaqueca crônica. Sinais vitais dentro da normalidade. Recomenda-se avaliação mais detalhada para investigar as causas dos sintomas.\nPontuação: 3",
+    "_source_file": "Maria_Oliveira_033.json"
+  },
+  {
+    "patient": "Maria Oliveira 091",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "7",
+    "analysis": "Avaliação: Paciente apresenta sintomas de febre alta, tosse seca e dor no corpo, além de comorbidades de Diabetes tipo 2 e hipertensão. Os sinais vitais indicam febre moderada, frequência cardíaca elevada, pressão arterial levemente acima do normal, frequência respiratória dentro da faixa adequada, porém saturação de oxigênio abaixo do ideal. Recomenda-se avaliação médica urgente para investigação e tratamento adequado.\n\nPontuação: 7",
+    "_source_file": "Maria_Oliveira_091.json"
+  },
+  {
+    "patient": "Maria Santos 067",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "3",
+    "analysis": "Avaliação: O paciente apresenta dor de cabeça, náuseas e visão turva, sintomas comuns em pacientes com enxaqueca crônica. Os sinais vitais estão dentro da faixa normal, o que indica estabilidade clínica.\nPontuação: 3",
+    "_source_file": "Maria_Santos_067.json"
+  },
+  {
+    "patient": "Maria Silva 018",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "4",
+    "analysis": "Avaliação: Paciente apresenta dor de cabeça, náuseas e visão turva, sintomas compatíveis com enxaqueca crônica. Os sinais vitais estão dentro da normalidade.\nPontuação: 4",
+    "_source_file": "Maria_Silva_018.json"
+  },
+  {
+    "patient": "Maria Silva 086",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "3",
+    "analysis": "Avaliação: Paciente apresenta dor de cabeça, náuseas, visão turva e comorbidade de enxaqueca crônica, porém com sinais vitais dentro da normalidade.\nPontuação: 3",
+    "_source_file": "Maria_Silva_086.json"
+  },
+  {
+    "patient": "Maria Silva 092",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "7",
+    "analysis": "Avaliação: Paciente apresenta sintomas de febre alta, tosse seca e dor no corpo, além de comorbidades de diabetes tipo 2 e hipertensão. Os sinais vitais mostram temperatura elevada, pressão arterial ligeiramente elevada, frequência cardíaca e respiratória dentro dos limites normais, porém a saturação de oxigênio está um pouco abaixo do ideal. Há indicativos de quadro infeccioso que pode estar relacionado a alguma complicação devido às comorbidades pré-existentes.\nPontuação: 7.",
+    "_source_file": "Maria_Silva_092.json"
+  },
+  {
+    "patient": "Maria Souza 009",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: O paciente Maria Souza 009 apresenta sintomas de falta de ar, dor no peito e suor excessivo, além de ter histórico de infarto prévio e hipertensão. Suas medidas vitais indicam uma temperatura normal, frequência cardíaca elevada, pressão arterial elevada, respiração normal e saturação de oxigênio baixa. Considerando todos esses dados, a gravidade do caso é alta.\nPontuação: 8",
+    "_source_file": "Maria_Souza_009.json"
+  },
+  {
+    "patient": "Maria Souza 053",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "4",
+    "analysis": "Avaliação: Paciente apresenta dor de cabeça, náuseas, visão turva e possui comorbidade de enxaqueca crônica. Os sinais vitais estão dentro da normalidade, com temperatura de 36.9°C, frequência cardíaca de 78 bpm, pressão arterial de 110/70 mmHg, frequência respiratória de 16 irpm e saturação de oxigênio de 98%. Recomenda-se avaliação mais detalhada para investigar a origem dos sintomas e possível crise de enxaqueca.\n\nPontuação: 4",
+    "_source_file": "Maria_Souza_053.json"
+  },
+  {
+    "patient": "Maria Souza 084",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "7",
+    "analysis": "Avaliação: Paciente apresenta sintomas de febre alta, tosse seca e dor no corpo, além de comorbidades de Diabetes tipo 2 e hipertensão. Os sinais vitais mostram temperatura elevada, frequência cardíaca normal, pressão arterial levemente elevada, frequência respiratória normal e saturação de oxigênio levemente baixa.\nPontuação: 7",
+    "_source_file": "Maria_Souza_084.json"
+  },
+  {
+    "patient": "Mariana Almeida 046",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: Paciente apresenta falta de ar, dor no peito e suor excessivo, além de comorbidades de infarto prévio e hipertensão. Os sinais vitais mostram uma temperatura elevada, frequência cardíaca aumentada, pressão arterial elevada, respiração normal e baixa saturação de oxigênio.\nPontuação: 8",
+    "_source_file": "Mariana_Almeida_046.json"
+  },
+  {
+    "patient": "Mariana Gomes 047",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "3",
+    "analysis": "Avaliação: A paciente Mariana Gomes 047 apresenta sintomas de dor de cabeça, náuseas, visão turva e possui enxaqueca crônica como comorbidade. Seus sinais vitais estão dentro dos valores de referência, com temperatura de 36.9°C, frequência cardíaca de 78 bpm, pressão arterial de 110/70 mmHg, frequência respiratória de 16 irpm e saturação de oxigênio de 98%.\n\nPontuação: 3",
+    "_source_file": "Mariana_Gomes_047.json"
+  },
+  {
+    "patient": "Mariana Oliveira 095",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: Paciente apresenta febre alta, tosse seca, dor no corpo, diabetes tipo 2, hipertensão, temperatura elevada, frequência cardíaca elevada, pressão arterial levemente elevada, taxa de saturação de oxigênio abaixo do ideal. Sintomas sugerem possível infecção respiratória com complicações devido às comorbidades.\nPontuação: 8",
+    "_source_file": "Mariana_Oliveira_095.json"
+  },
+  {
+    "patient": "Mariana Pereira 027",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "7",
+    "analysis": "Avaliação: O paciente Mariana Pereira 027 apresenta sintomas de febre alta, tosse seca e dor no corpo, além de comorbidades de Diabetes tipo 2 e hipertensão. Os sinais vitais mostram uma temperatura elevada, frequência cardíaca e pressão arterial dentro da normalidade, mas com saturação de oxigênio abaixo do ideal. Considerando o quadro clínico apresentado, recomenda-se uma avaliação médica e possivelmente a realização de exames adicionais para investigar a causa da febre e da queda na saturação de oxigênio.\n\nPontuação: 7",
+    "_source_file": "Mariana_Pereira_027.json"
+  },
+  {
+    "patient": "Mariana Rodrigues 048",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "7.5",
+    "analysis": "Avaliação: A paciente Mariana Rodrigues apresenta sintomas de febre alta, tosse seca, dor no corpo, além de possuir comorbidades de diabetes tipo 2 e hipertensão. Seus sinais vitais mostram uma temperatura elevada, frequência cardíaca levemente aumentada, pressão arterial sistólica e diastólica elevadas, frequência respiratória dentro dos limites normais, porém com uma saturação de oxigênio abaixo do ideal. Considerando o quadro clínico apresentado, é importante investigar a possibilidade de infecção respiratória aguda, podendo ser causada por um quadro de COVID-19 devido aos sintomas e baixa saturação de oxigênio.\n\nPontuação: 7.5",
+    "_source_file": "Mariana_Rodrigues_048.json"
+  },
+  {
+    "patient": "Mariana Santos 026",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "7",
+    "analysis": "Avaliação: Paciente apresenta febre alta, tosse seca, dor no corpo, com comorbidades de Diabetes tipo 2 e hipertensão. Os sinais vitais mostram uma temperatura elevada de 38.5°C, frequência cardíaca dentro do limite normal, pressão arterial levemente elevada, frequência respiratória normal e saturação de oxigênio abaixo do ideal.\nPontuação: 7",
+    "_source_file": "Mariana_Santos_026.json"
+  },
+  {
+    "patient": "Mariana Santos 060",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: Paciente apresenta sintomas de falta de ar, dor no peito, suor excessivo, com antecedente de infarto prévio e hipertensão. Os sinais vitais mostram temperatura normal, taquicardia, pressão arterial elevada, frequência respiratória normal e baixa saturação de oxigênio.\nPontuação: 8",
+    "_source_file": "Mariana_Santos_060.json"
+  },
+  {
+    "patient": "Mariana Santos 082",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "7",
+    "analysis": "Avaliação: Paciente apresenta febre alta, tosse seca, dor no corpo, diabetes tipo 2 e hipertensão. Os sinais vitais indicam temperatura elevada, frequência cardíaca e pressão arterial dentro dos limites normais, porém a saturação de oxigênio está abaixo do ideal.\nPontuação: 7",
+    "_source_file": "Mariana_Santos_082.json"
+  },
+  {
+    "patient": "Mariana Silva 063",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "3",
+    "analysis": "Avaliação: Paciente apresenta sintomas de dor de cabeça, náuseas e visão turva, com histórico de enxaqueca crônica. Os sinais vitais estão dentro dos valores de referência. Recomenda-se avaliação mais detalhada para investigação da causa dos sintomas.\nPontuação: 3",
+    "_source_file": "Mariana_Silva_063.json"
+  },
+  {
+    "patient": "Mariana Souza 006",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "7",
+    "analysis": "Avaliação: Paciente apresenta sintomas de febre alta, tosse seca, dor no corpo e possui comorbidades de diabetes tipo 2 e hipertensão. Os sinais vitais mostram uma temperatura elevada, frequência cardíaca e pressão arterial dentro dos valores normais, mas a saturação de oxigênio está um pouco abaixo do recomendado.\nPontuação: 7",
+    "_source_file": "Mariana_Souza_006.json"
+  },
+  {
+    "patient": "Paulo Almeida 020",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "4",
+    "analysis": "Avaliação: O paciente apresenta sintomas de dor de cabeça, náuseas e visão turva, juntamente com a comorbidade de enxaqueca crônica. No entanto, seus sinais vitais estão dentro dos parâmetros normais, o que sugere que a condição atual pode não representar uma emergência imediata.\nPontuação: 4",
+    "_source_file": "Paulo_Almeida_020.json"
+  },
+  {
+    "patient": "Paulo Almeida 075",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "3",
+    "analysis": "Avaliação: O paciente Paulo Almeida 075 apresenta sintomas de dor de cabeça, náuseas e visão turva, além de possuir uma comorbidade de enxaqueca crônica. Seus sinais vitais estão dentro da normalidade, com temperatura de 36.9°C, frequência cardíaca de 78 bpm, pressão arterial sistólica de 110 mmHg, pressão arterial diastólica de 70 mmHg, frequência respiratória de 16 irpm e saturação de oxigênio de 98%.\nPontuação: 3. A gravidade dos sintomas e comorbidade é leve, mas é necessário um acompanhamento para investigar a causa dos sintomas e tratar de forma adequada.",
+    "_source_file": "Paulo_Almeida_075.json"
+  },
+  {
+    "patient": "Paulo Almeida 076",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "3",
+    "analysis": "Avaliação: O paciente apresenta dor de cabeça, náuseas e visão turva, sintomas comuns da enxaqueca crônica. Seus sinais vitais estão dentro dos valores normais.\nPontuação: 3",
+    "_source_file": "Paulo_Almeida_076.json"
+  },
+  {
+    "patient": "Paulo Almeida 083",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "3",
+    "analysis": "Avaliação: O paciente Paulo Almeida 083 apresenta dor de cabeça, náuseas, visão turva e possui comorbidade de enxaqueca crônica. Seus sinais vitais estão dentro dos parâmetros normais, com temperatura de 36,9°C, frequência cardíaca de 78 bpm, pressão arterial sistólica de 110 mmHg, pressão arterial diastólica de 70 mmHg, frequência respiratória de 16 irpm e saturação de oxigênio de 98%. Considerando os sintomas e comorbidades apresentados, a avaliação clínica sugere um quadro de enxaqueca aguda.\nPontuação: 3,5",
+    "_source_file": "Paulo_Almeida_083.json"
+  },
+  {
+    "patient": "Paulo Costa 038",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: O paciente apresenta sintomas de falta de ar, dor no peito e suor excessivo, juntamente com comorbidades de infarto prévio e hipertensão. Seus sinais vitais indicam uma temperatura normal, frequência cardíaca elevada, pressão arterial elevada, frequência respiratória normal e saturação de oxigênio baixa.\nPontuação: 8",
+    "_source_file": "Paulo_Costa_038.json"
+  },
+  {
+    "patient": "Paulo Martins 054",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "7",
+    "analysis": "Avaliação: O paciente apresenta febre alta, tosse seca, dor no corpo, diabetes tipo 2, hipertensão e valores ligeiramente elevados de temperatura, pressão arterial e frequência cardíaca. A saturação de oxigênio está um pouco abaixo do ideal.\nPontuação: 7",
+    "_source_file": "Paulo_Martins_054.json"
+  },
+  {
+    "patient": "Paulo Rodrigues 043",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: O paciente apresenta falta de ar, dor no peito e suor excessivo, além de histórico de infarto prévio e hipertensão. Os sinais vitais indicam temperatura normal, frequência cardíaca elevada, pressão arterial elevada, respiração dentro da normalidade, mas saturação de oxigênio baixa.\nPontuação: 8",
+    "_source_file": "Paulo_Rodrigues_043.json"
+  },
+  {
+    "patient": "Paulo Rodrigues 070",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "7",
+    "analysis": "Avaliação: O paciente apresenta sintomas de febre alta, tosse seca, dor no corpo, além de comorbidades de diabetes tipo 2 e hipertensão. Os sinais vitais indicam uma temperatura elevada, frequência cardíaca e pressão arterial dentro dos parâmetros normais, porém com saturação de oxigênio abaixo do ideal.\nPontuação: 7",
+    "_source_file": "Paulo_Rodrigues_070.json"
+  },
+  {
+    "patient": "Paulo Silva 005",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "7",
+    "analysis": "Avaliação: Paciente com sintomas de febre alta, tosse seca, dor no corpo, com comorbidades de diabetes tipo 2 e hipertensão. Apresenta temperatura elevada, frequência cardíaca e pressão arterial dentro dos valores de referência, porém com saturação de oxigênio ligeiramente abaixo do ideal.\nPontuação: 7",
+    "_source_file": "Paulo_Silva_005.json"
+  },
+  {
+    "patient": "Paulo Silva 010",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: O paciente apresenta falta de ar, dor no peito, suor excessivo, histórico de infarto prévio e hipertensão. Os sinais vitais indicam temperatura elevada, frequência cardíaca acelerada, pressão arterial elevada, saturação de oxigênio baixa e respiração dentro dos padrões normais. Considerando o quadro clínico, o paciente parece estar em uma situação de gravidade moderada a elevada.\n\nPontuação: 8",
+    "_source_file": "Paulo_Silva_010.json"
+  },
+  {
+    "patient": "Paulo Silva 094",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: Paciente apresenta falta de ar, dor no peito, suor excessivo, histórico de infarto previo e hipertensão. Os sinais vitais estão alterados com temperatura normal, taquicardia, pressão arterial elevada, saturação de oxigênio baixa e normal respiração. Indica uma possível complicação cardíaca aguda.\nPontuação: 8",
+    "_source_file": "Paulo_Silva_094.json"
+  },
+  {
+    "patient": "Paulo Silva 096",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "7",
+    "analysis": "Avaliação: Paciente com sintomas de febre alta, tosse seca e dor no corpo, com comorbidades de diabetes tipo 2 e hipertensão. Apresenta febre de 38.5°C, frequência cardíaca elevada de 95 bpm, pressão arterial levemente elevada, taxa respiratória normal e saturação de oxigênio levemente abaixo do ideal. Sugere-se avaliação para possibilidade de infecção, considerando as comorbidades do paciente.\nPontuação: 7",
+    "_source_file": "Paulo_Silva_096.json"
+  },
+  {
+    "patient": "Paulo Souza 012",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "9",
+    "analysis": "Avaliação: O paciente Paulo Souza 012 apresenta sintomas de falta de ar, dor no peito e suor excessivo, juntamente com as comorbidades de infarto prévio e hipertensão. Seus sinais vitais mostram uma temperatura normal, frequência cardíaca elevada, pressão arterial elevada, taxa respiratória normal e saturação de oxigênio abaixo do normal. Esses sintomas e comorbidades, juntamente com os sinais vitais anormais, indicam uma condição grave que requer atenção imediata.\nPontuação: 9",
+    "_source_file": "Paulo_Souza_012.json"
+  },
+  {
+    "patient": "Pedro Almeida 050",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "3",
+    "analysis": "Avaliação: O paciente apresenta sintomas de dor de cabeça, náuseas e visão turva, além de possuir comorbidade de enxaqueca crônica. No entanto, seus sinais vitais estão dentro dos valores normais, com temperatura, pressão arterial, frequência cardíaca, frequência respiratória e saturação de oxigênio adequados. Deve-se considerar a possibilidade de um episódio de enxaqueca aguda, recomendando-se acompanhamento médico para controle dos sintomas.\nPontuação: 3",
+    "_source_file": "Pedro_Almeida_050.json"
+  },
+  {
+    "patient": "Pedro Gomes 003",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: O paciente Pedro Gomes 003 apresenta sintomas de falta de ar, dor no peito e suor excessivo, além de comorbidades prévias de infarto e hipertensão. Suas sinais vitais mostram uma temperatura normal, um aumento da frequência cardíaca e pressão arterial elevada, juntamente com uma saturação de oxigênio baixa.\nPontuação: 8",
+    "_source_file": "Pedro_Gomes_003.json"
+  },
+  {
+    "patient": "Pedro Gomes 069",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "3",
+    "analysis": "Avaliação: O paciente apresenta sintomas de dor de cabeça, náuseas e visão turva, além de ter a comorbidade de enxaqueca crônica. No entanto, seus sinais vitais estão dentro dos parâmetros normais, com temperatura, frequência cardíaca, pressão arterial, frequência respiratória e saturação de oxigênio adequados.\nPontuação: 3",
+    "_source_file": "Pedro_Gomes_069.json"
+  },
+  {
+    "patient": "Pedro Martins 002",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "7",
+    "analysis": "Avaliação: O paciente Pedro Martins 002 apresenta sintomas como febre alta, tosse seca e dor no corpo, além de ter comorbidades de diabetes tipo 2 e hipertensão. Os sinais vitais mostram uma temperatura elevada, taquicardia, pressão arterial levemente elevada, taxa respiratória normal e níveis de saturação de oxigênio levemente baixos.\nPontuação: 7",
+    "_source_file": "Pedro_Martins_002.json"
+  },
+  {
+    "patient": "Pedro Oliveira 090",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "7",
+    "analysis": "Avaliação: O paciente Pedro Oliveira 090 apresenta sintomas de febre alta, tosse seca e dor no corpo, juntamente com comorbidades de diabetes tipo 2 e hipertensão. Os sinais vitais mostram uma temperatura elevada de 38.5°C, frequência cardíaca dentro do limite normal, pressão arterial levemente elevada, frequência respiratória normal e saturação de oxigênio baixa em 92%.\n\nPontuação: 7",
+    "_source_file": "Pedro_Oliveira_090.json"
+  },
+  {
+    "patient": "Pedro Pereira 066",
+    "risk_category": "VERDE",
+    "priority": 4,
+    "score": "5",
+    "analysis": "Avaliação: O paciente Pedro Pereira 066 apresenta sintomas de dor de cabeça, náuseas e visão turva, juntamente com a comorbidade de enxaqueca crônica. Seus sinais vitais estão dentro dos parâmetros normais.\nPontuação: 5",
+    "_source_file": "Pedro_Pereira_066.json"
+  },
+  {
+    "patient": "Pedro Santos 016",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: Paciente apresenta febre alta, tosse seca e dor no corpo, além de possuir comorbidades de diabetes tipo 2 e hipertensão. Os sinais vitais indicam uma temperatura elevada, frequência cardíaca aumentada e saturação de oxigênio abaixo do esperado. Há sinais de comprometimento do sistema respiratório e cardiovascular, o que pode indicar uma infecção grave.\nPontuação: 8",
+    "_source_file": "Pedro_Santos_016.json"
+  },
+  {
+    "patient": "Pedro Santos 079",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8",
+    "analysis": "Avaliação: O paciente apresenta falta de ar, dor no peito, suor excessivo, histórico de infarto prévio e hipertensão. Além disso, seus sinais vitais mostram temperatura elevada (37.4°C), frequência cardíaca elevada (110 bpm), pressão arterial sistólica elevada (150 mmHg), pressão arterial diastólica elevada (100 mmHg), frequência respiratória dentro da normalidade (16 irpm) e saturação de oxigênio baixa (88%).\nPontuação: 8",
+    "_source_file": "Pedro_Santos_079.json"
+  },
+  {
+    "patient": "Pedro Silva 014",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "9",
+    "analysis": "Avaliação: O paciente apresenta falta de ar, dor no peito, suor excessivo, com antecedente de infarto prévio e hipertensão. Os sinais vitais mostram uma temperatura normal, frequência cardíaca elevada, pressão arterial elevada, respiração dentro da normalidade e saturação de oxigênio baixa.\nPontuação: 9",
+    "_source_file": "Pedro_Silva_014.json"
+  },
+  {
+    "patient": "Pedro Silva 098",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "9",
+    "analysis": "Avaliação: Paciente com falta de ar, dor no peito, suor excessivo, antecedente de infarto prévio e hipertensão. Apresenta febre, taquicardia, pressão arterial elevada, saturação de oxigênio baixa. Indicativo de quadro grave provavelmente relacionado a problemas cardíacos ou respiratórios. Recomenda-se avaliação médica urgente e intervenção imediata.\nPontuação: 9.",
+    "_source_file": "Pedro_Silva_098.json"
+  },
+  {
+    "patient": "Pedro Souza 039",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "8.5",
+    "analysis": "Avaliação: O paciente Pedro Souza 039 apresenta sintomas de febre alta, tosse seca e dor no corpo, além de comorbidades de Diabetes tipo 2 e hipertensão. Seus sinais vitais mostram uma temperatura elevada de 38.5°C, frequência cardíaca de 95 bpm, pressão arterial sistólica de 140 mmHg, pressão arterial diastólica de 90 mmHg, frequência respiratória de 16 irpm e saturação de oxigênio de 92%.\n\nPontuação: 8.5",
+    "_source_file": "Pedro_Souza_039.json"
+  },
+  {
+    "patient": "Joao da Silva",
+    "risk_category": "LARANJA",
+    "priority": 2,
+    "score": "7",
+    "analysis": "Avaliação: Paciente apresenta sintomas de febre alta, tosse seca e dor no corpo, além de comorbidades de diabetes tipo 2 e hipertensão. Sinais vitais mostram temperatura elevada, frequência cardíaca e pressão arterial dentro dos padrões, e saturação de oxigênio ligeiramente baixa.\nPontuação: 7",
+    "_source_file": "agent_metrics.json"
+  }
+]
