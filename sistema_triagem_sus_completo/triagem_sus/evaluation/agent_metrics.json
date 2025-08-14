@@ -1,7 +1,7 @@
 {
-  "patient": "",
-  "risk_category": "",
-  "priority": "",
-  "score": "",
-  "analysis": ""
+  "patient": "Joao da Silva",
+  "risk_category": "LARANJA",
+  "priority": 2,
+  "score": "7",
+  "analysis": "Avaliação: Paciente apresenta sintomas de febre alta, tosse seca e dor no corpo, além de comorbidades de diabetes tipo 2 e hipertensão. Sinais vitais mostram temperatura elevada, frequência cardíaca e pressão arterial dentro dos padrões, e saturação de oxigênio ligeiramente baixa.\nPontuação: 7"
 }
