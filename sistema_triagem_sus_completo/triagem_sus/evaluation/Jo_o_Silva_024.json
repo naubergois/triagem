@@ -1,0 +1,7 @@
+{
+  "patient": "João Silva 024",
+  "risk_category": "VERDE",
+  "priority": 4,
+  "score": "3",
+  "analysis": "Avaliação: O paciente apresenta sintomas de dor de cabeça, náuseas e visão turva, juntamente com a comorbidade de enxaqueca crônica. Seus sinais vitais estão dentro dos parâmetros normais, indicando estabilidade. Recomenda-se investigação mais aprofundada da enxaqueca crônica e dos sintomas atuais.\nPontuação: 3"
+}

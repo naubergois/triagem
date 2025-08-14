@@ -1,0 +1,7 @@
+{
+  "patient": "Mariana Rodrigues 048",
+  "risk_category": "LARANJA",
+  "priority": 2,
+  "score": "7.5",
+  "analysis": "Avaliação: A paciente Mariana Rodrigues apresenta sintomas de febre alta, tosse seca, dor no corpo, além de possuir comorbidades de diabetes tipo 2 e hipertensão. Seus sinais vitais mostram uma temperatura elevada, frequência cardíaca levemente aumentada, pressão arterial sistólica e diastólica elevadas, frequência respiratória dentro dos limites normais, porém com uma saturação de oxigênio abaixo do ideal. Considerando o quadro clínico apresentado, é importante investigar a possibilidade de infecção respiratória aguda, podendo ser causada por um quadro de COVID-19 devido aos sintomas e baixa saturação de oxigênio.\n\nPontuação: 7.5"
+}

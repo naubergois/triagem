@@ -1,4 +1,101 @@
 nome,idade,sexo,sintomas,pressao_arterial,frequencia_cardiaca,temperatura,saturacao_oxigenio,historico_medico
-Joao da Silva,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
-Maria Oliveira,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,"Enxaqueca cronica"
-Carlos Souza,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Carlos Rodrigues 001,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Pedro Martins 002,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Pedro Gomes 003,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Ana Rodrigues 004,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Paulo Silva 005,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Mariana Souza 006,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Lucas Oliveira 007,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Maria Almeida 008,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Maria Souza 009,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Paulo Silva 010,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+João Costa 011,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Paulo Souza 012,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Juliana Souza 013,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Pedro Silva 014,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Lucas Silva 015,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Pedro Santos 016,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Lucas Almeida 017,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Maria Silva 018,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Lucas Rodrigues 019,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Paulo Almeida 020,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Juliana Martins 021,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Carlos Gomes 022,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Juliana Souza 023,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+João Silva 024,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Lucas Gomes 025,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Mariana Santos 026,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Mariana Pereira 027,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Fernanda Silva 028,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Ana Martins 029,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Carlos Costa 030,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Lucas Rodrigues 031,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Maria Martins 032,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Maria Oliveira 033,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Juliana Almeida 034,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Maria Costa 035,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Fernanda Souza 036,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+João Costa 037,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Paulo Costa 038,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Pedro Souza 039,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+João Gomes 040,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Lucas Pereira 041,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Juliana Rodrigues 042,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Paulo Rodrigues 043,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Juliana Oliveira 044,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+João Martins 045,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Mariana Almeida 046,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Mariana Gomes 047,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Mariana Rodrigues 048,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+João Souza 049,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Pedro Almeida 050,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Carlos Costa 051,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Fernanda Almeida 052,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Maria Souza 053,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Paulo Martins 054,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Ana Costa 055,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Carlos Costa 056,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Carlos Martins 057,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Carlos Souza 058,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+João Almeida 059,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Mariana Santos 060,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Lucas Souza 061,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Fernanda Costa 062,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Mariana Silva 063,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Fernanda Gomes 064,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Lucas Almeida 065,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Pedro Pereira 066,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Maria Santos 067,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Carlos Martins 068,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Pedro Gomes 069,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Paulo Rodrigues 070,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Juliana Rodrigues 071,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+João Almeida 072,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Ana Silva 073,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Lucas Oliveira 074,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Paulo Almeida 075,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Paulo Almeida 076,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+João Martins 077,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+João Souza 078,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Pedro Santos 079,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Fernanda Martins 080,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Ana Souza 081,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Mariana Santos 082,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Paulo Almeida 083,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Maria Souza 084,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+João Almeida 085,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Maria Silva 086,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Carlos Oliveira 087,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Lucas Martins 088,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Ana Martins 089,30,Feminino,"Dor de cabeca, nauseas, visao turva",110/70,78,36.9,98,Enxaqueca cronica
+Pedro Oliveira 090,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Maria Oliveira 091,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Maria Silva 092,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Ana Oliveira 093,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Paulo Silva 094,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+Mariana Oliveira 095,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Paulo Silva 096,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Fernanda Gomes 097,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Pedro Silva 098,70,Masculino,"Falta de ar, dor no peito, suor excessivo",150/100,110,37.4,88,"Infarto previo, hipertensao"
+João Silva 099,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"
+Ana Gomes 100,45,Masculino,"Febre alta, tosse seca, dor no corpo",140/90,95,38.5,92,"Diabetes tipo 2, hipertensao"

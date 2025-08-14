@@ -1,0 +1,7 @@
+{
+  "patient": "Paulo Almeida 075",
+  "risk_category": "VERDE",
+  "priority": 4,
+  "score": "3",
+  "analysis": "Avaliação: O paciente Paulo Almeida 075 apresenta sintomas de dor de cabeça, náuseas e visão turva, além de possuir uma comorbidade de enxaqueca crônica. Seus sinais vitais estão dentro da normalidade, com temperatura de 36.9°C, frequência cardíaca de 78 bpm, pressão arterial sistólica de 110 mmHg, pressão arterial diastólica de 70 mmHg, frequência respiratória de 16 irpm e saturação de oxigênio de 98%.\nPontuação: 3. A gravidade dos sintomas e comorbidade é leve, mas é necessário um acompanhamento para investigar a causa dos sintomas e tratar de forma adequada."
+}

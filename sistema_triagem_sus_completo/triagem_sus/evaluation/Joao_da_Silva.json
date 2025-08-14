@@ -2,6 +2,6 @@
   "patient": "Joao da Silva",
   "risk_category": "LARANJA",
   "priority": 2,
-  "score": "7",
-  "analysis": "Avaliação: Paciente apresenta sintomas de febre alta, tosse seca e dor no corpo, além de comorbidades de Diabetes tipo 2 e hipertensão. Os sinais vitais mostram temperatura elevada, frequência cardíaca dentro da normalidade, pressão arterial levemente elevada, frequência respiratória normal e saturação de oxigênio abaixo do ideal.\nPontuação: 7"
+  "score": "8",
+  "analysis": "Avaliação: O paciente Joao da Silva apresenta sintomas de febre alta, tosse seca e dor no corpo, além de ter comorbidades de Diabetes tipo 2 e hipertensão. Suas medidas vitais estão com temperatura elevada (38.5°C), frequência cardíaca e pressão arterial dentro dos limites normais, porém com saturação de oxigênio baixa (92%). Considerando o quadro clínico apresentado e a baixa saturação de oxigênio, sugere-se uma avaliação mais aprofundada e possível internação hospitalar para avaliação e tratamento. \nPontuação: 8"
 }
